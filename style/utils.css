@@ -1,0 +1,208 @@
+/* ======================================
+   ПЕРЕМЕННЫЕ И БАЗОВЫЕ СТИЛИ
+   ====================================== */
+
+:root {
+    /* Основные цвета */
+    --color-bg: #221E1F;
+    --color-primary: #C22033;
+    --color-accent: #F0CC0E;
+    --color-alt: #283E2E;
+    --color-text: #EEE2E3;
+    
+    /* Шрифты */
+    --font-heading: 'Unbounded', sans-serif;
+    --font-text: 'Lato', sans-serif;
+}
+
+body {
+    background-color: var(--color-bg);
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-text);
+    font-family: var(--font-text);
+    font-weight: normal;
+    cursor: pointer;
+}
+
+/* ======================================
+   ТИПОГРАФИКА
+   ====================================== */
+
+.text {
+    font-family: var(--font-text);
+    color: var(--color-text);
+    line-height: 150%;
+}
+
+.text--special {
+    line-height: 140%;
+}
+
+.text--special-white {
+    color: var(--color-text);
+}
+
+.text--special-red {
+    color: var(--color-primary);
+}
+
+p {
+    color: var(--color-text);
+    font-family: var(--font-text);
+    font-weight: normal;
+    line-height: 150%;
+}
+
+.title {
+    font-family: var(--font-heading);
+    font-weight: bold;
+    color: var(--color-primary);
+}
+
+.title--info {
+    font-family: var(--font-heading);
+    font-weight: bold;
+    color: var(--color-text);
+}
+
+/* ======================================
+   КОНТЕЙНЕР
+   ====================================== */
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* ======================================
+   КНОПКИ
+   ====================================== */
+
+/* Стиль для кнопки */
+.button {
+    background: transparent;
+    border: 5px solid var(--color-primary);
+    color: var(--color-text);
+    font-family: var(--font-text);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    height: 90px;
+}
+
+.button:hover {
+    box-shadow: 3px 4px 25px var(--color-primary);
+}
+
+.button:active {
+    background-color: var(--color-primary);
+}
+
+/* ======================================
+   МЕДИА-ЗАПРОСЫ - АДАПТИВНОСТЬ
+   ====================================== */
+
+/* Большие мониторы (≥1920px) */
+@media screen and (min-width: 1920px) {
+    .title {
+        font-size: 72px;
+    }
+    
+    .title--info {
+        font-size: 40px;
+    }
+    
+    .text--special {
+        font-size: 36px;
+    }
+    
+    p, .text {
+        font-size: 32px;
+    }
+    
+    .container {
+        max-width: calc(1620px + 30px);
+    }
+}
+
+/* Ноутбуки (≥1440px и <1920px) */
+@media screen and (min-width: 1440px) and (max-width: 1919px) {
+    .title {
+        font-size: 68px;
+    }
+    
+    .title--info {
+        font-size: 36px;
+    }
+    
+    .text--special {
+        font-size: 32px;
+    }
+    
+    p, .text {
+        font-size: 28px;
+    }
+    
+    .container {
+        max-width: calc(1000px + 30px);
+    }
+}
+
+/* Планшеты (≥1024px и <1440px) */
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+    .title {
+        font-size: 64px;
+    }
+    
+    .title--info {
+        font-size: 32px;
+    }
+    
+    .text--special {
+        font-size: 28px;
+    }
+    
+    p, .text {
+        font-size: 24px;
+    }
+    
+    .container {
+        max-width: calc(800px + 30px);
+    }
+}
+
+/* Телефоны (<1024px) */
+@media screen and (max-width: 1023px) {
+    .title {
+        font-size: 36px;
+    }
+    
+    .title--info {
+        font-size: 20px;
+    }
+    
+    .text--special {
+        font-size: 20px;
+    }
+    
+    p, .text {
+        font-size: 16px;
+    }
+    
+    .container {
+        max-width: calc(400px + 30px);
+    }
+}
+
+/* ======================================
+   УТИЛИТЫ
+   ====================================== */
+
+/* Блокировка прокрутки страницы */
+.no-scroll {
+    overflow: hidden;
+}
+

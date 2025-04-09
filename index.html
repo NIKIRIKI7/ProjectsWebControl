@@ -10,7 +10,12 @@
     <link rel="stylesheet" href="fonts/Unbounded/stylesheet.css">
     
     <!-- Подключение стилей -->
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/utils.css">
+    <link rel="stylesheet" href="style/header.css">
+    <link rel="stylesheet" href="style/footer.css">
     <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/slider.css">
     
     <!-- Предзагрузка шрифтов для оптимизации -->
     <link rel="preload" href="fonts/Unbounded/Unbounded-Regular.woff2" as="font" type="font/woff2" crossorigin>
@@ -19,8 +24,126 @@
     <link rel="preload" href="fonts/Lato/Lato-Bold.woff" as="font" type="font/woff" crossorigin>
 </head>
 <body>
-    
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="header__logo-link">
+                    <div class="header__logo">
+                        <img class="header__logo-image" src="img/svg/logo.svg" alt="Логотип Карнавал Нечести">
+                        <div class="header__title">
+                            <span class="header__title-top">Карнавал</span>
+                            <span class="header__title-bottom">Нечести</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <button class="header__burger-button">
+                    <span class="header__burger-line"></span>
+                    <span class="header__burger-line"></span>
+                    <span class="header__burger-line"></span>
+                </button>
+                
+                <nav class="header__nav">
+                    <ul class="header__menu">
+                        <li class="header__menu-item"><a href="#" class="header__menu-link">Главная</a></li>
+                        <li class="header__menu-item"><a href="#" class="header__menu-link">Сотрудники</a></li>
+                        <li class="header__menu-item"><a href="#" class="header__menu-link">Квесты</a></li>
+                        <li class="header__menu-item"><a href="#" class="header__menu-link">Услуги</a></li>
+                    </ul>
+                </nav>
+                <div class="header__social">
+                    <a href="#" class="header__social-link header__social-link--vk">
+                        <img class="header__social-icon" src="img/svg/header_vk.svg" alt="ВКонтакте">
+                    </a>
+                    <a href="#" class="header__social-link header__social-link--telegram">
+                        <img class="header__social-icon" src="img/svg/header_telegram.svg" alt="Telegram">
+                    </a>
+                    <a href="#" class="header__social-link header__social-link--instagram">
+                        <img class="header__social-icon" src="img/svg/header_instagram.svg" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Секция со слайдером квестов -->
+        <section class="section section--slider">
+            <div class="slider">
+                <div class="slider__container">
+                    <div class="slider__track">
+                        <!-- Первый слайд -->
+                        <article class="slider__slide">
+                            <div class="slider__content">
+                                <h2 class="slider__title">Страшные тайны</h2>
+                                <a href="#" class="slider__button">Узнать подробнее</a>
+                            </div>
+                            <div class="slider__image-wrapper">
+                                <img src="img/main_page/main_01.webp" alt="Квест" class="slider__image">
+                            </div>
+                            <div class="slider__overlay"></div>
+                        </article>
+                        
+                        <!-- Второй слайд -->
+                        <article class="slider__slide">
+                            <div class="slider__content">
+                                <h2 class="slider__title">Мистические истории</h2>
+                                <a href="#" class="slider__button">Забронировать</a>
+                            </div>
+                            <div class="slider__image-wrapper">
+                                <img src="img/main_page/popular_01.webp" alt="Квест" class="slider__image">
+                            </div>
+                            <div class="slider__overlay"></div>
+                        </article>
+                        
+                        <!-- Третий слайд -->
+                        <article class="slider__slide">
+                            <div class="slider__content">
+                                <h2 class="slider__title">Загадочный мир</h2>
+                                <a href="#" class="slider__button">Выбрать время</a>
+                            </div>
+                            <div class="slider__image-wrapper">
+                                <img src="img/main_page/popular_02.webp" alt="Квест" class="slider__image">
+                            </div>
+                            <div class="slider__overlay"></div>
+                        </article>
+                    </div>
+                    
+                    <!-- Навигационные элементы управления -->
+                    <div class="slider__controls">
+                        <!-- Стрелки навигации -->
+                        <button class="slider__arrow slider__arrow--prev" aria-label="Предыдущий слайд">
+                            <img src="img/svg/arrow-left.svg" alt="" class="slider__arrow-icon">
+                        </button>
+                        <button class="slider__arrow slider__arrow--next" aria-label="Следующий слайд">
+                            <img src="img/svg/arrow-right.svg" alt="" class="slider__arrow-icon">
+                        </button>
+                    </div>
+                    
+                    <!-- Индикаторы слайдов -->
+                    <div class="slider__indicators">
+                        <button class="slider__indicator slider__indicator--active" data-slide="0" aria-label="Перейти к слайду 1"></button>
+                        <button class="slider__indicator" data-slide="1" aria-label="Перейти к слайду 2"></button>
+                        <button class="slider__indicator" data-slide="2" aria-label="Перейти к слайду 3"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <!-- Подключение скриптов -->
-    <script src="js/main.js" defer></script>
+    <script>
+        // Проверяем поддержку ES модулей
+        const supportsESModules = 'noModule' in HTMLScriptElement.prototype;
+        
+        if (!supportsESModules) {
+            console.log('Браузер не поддерживает ES модули, загружаем полифилл');
+            // Создаем скрипт для полифилла
+            const polyfill = document.createElement('script');
+            polyfill.src = 'https://unpkg.com/es-module-shims@1.5.18/dist/es-module-shims.js';
+            document.head.appendChild(polyfill);
+        }
+    </script>
+    <script src="js/main.js" type="module" defer></script>
 </body>
 </html> 

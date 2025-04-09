@@ -1,0 +1,287 @@
+/* ======================================
+   БЛОК: HEADER
+   ====================================== */
+
+/* Основной блок хедера */
+.header {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(238, 226, 227, 0.1);
+}
+
+/* Внутренний контейнер хедера */
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Ссылка логотипа */
+.header__logo-link {
+    text-decoration: none;
+    display: block;
+    width: max-content;
+    position: relative;
+    z-index: 1;
+}
+
+/* Логотип с иконкой и текстом */
+.header__logo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header__logo-image {
+    height: 80px;
+    width: auto;
+}
+
+/* Стили для текста логотипа */
+.header__title {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.header__title-top {
+    font-family: var(--font-heading);
+    color: var(--color-text);
+}
+
+.header__title-bottom {
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+}
+
+/* ======================================
+   БЛОК: HEADER - БУРГЕР-МЕНЮ
+   ====================================== */
+
+/* Кнопка бургер-меню */
+.header__burger-button {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+}
+
+.header__burger-line {
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-primary);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Бургер в открытом состоянии */
+.header__burger-button.active .header__burger-line:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+}
+
+.header__burger-button.active .header__burger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.header__burger-button.active .header__burger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* ======================================
+   БЛОК: HEADER - НАВИГАЦИЯ
+   ====================================== */
+
+/* Стили для навигации */
+.header__nav {
+    font-family: var(--font-text);
+    color: var(--color-text);
+    position: relative;
+    z-index: 2;
+}
+
+.header__menu {
+    display: flex;
+    gap: 60px;
+}
+
+.header__menu-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.header__menu-link:hover {
+    color: var(--color-primary);
+}
+
+.header__menu-link:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--color-primary);
+    transition: width 0.3s ease;
+}
+
+.header__menu-link:hover:after {
+    width: 100%;
+}
+
+/* ======================================
+   БЛОК: HEADER - СОЦИАЛЬНЫЕ СЕТИ
+   ====================================== */
+
+/* Стили для блока социальных иконок */
+.header__social {
+    display: flex;
+    gap: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.header__social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header__social-icon {
+    width: 70px;
+    height: 70px;
+}
+
+.header__social-link:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(194, 32, 51, 0.7);
+}
+
+/* ======================================
+   МЕДИА-ЗАПРОСЫ - АДАПТИВНОСТЬ HEADER
+   ====================================== */
+
+/* Большие мониторы (≥1920px) */
+@media screen and (min-width: 1920px) {
+    .header__nav {
+        font-size: 40px;
+    }
+    
+    .header__logo-image {
+        height: 90px;
+    }
+}
+
+/* Ноутбуки (≥1440px и <1920px) */
+@media screen and (min-width: 1440px) and (max-width: 1919px) {
+    .header__nav {
+        font-size: 36px;
+    }
+    
+    .header__menu {
+        gap: 56px;
+    }
+    
+    .header__social {
+        display: none;
+    }
+}
+
+/* Планшеты (≥1024px и <1440px) */
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+    .header__nav {
+        font-size: 32px;
+    }
+    
+    .header__menu {
+        gap: 25px;
+    }
+    
+    .header__logo-image {
+        height: 70px;
+    }
+    
+    .header__social {
+        display: none;
+    }
+}
+
+/* Телефоны (<1024px) */
+@media screen and (max-width: 1023px) {
+    .header {
+        height: auto;
+        padding: 15px 0;
+    }
+    
+    .header__inner {
+        flex-direction: row;
+        align-items: center;
+        gap: 0;
+    }
+    
+    .header__burger-button {
+        display: flex;
+    }
+    
+    .header__logo-image {
+        height: 60px;
+    }
+    
+    .header__title {
+        font-size: 16px;
+    }
+    
+    .header__nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        height: 100vh;
+        background-color: var(--color-bg);
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+        padding: 100px 30px 30px;
+        transition: right 0.3s ease;
+        z-index: 5;
+    }
+    
+    .header__nav.active {
+        right: 0;
+    }
+    
+    .header__menu {
+        flex-direction: column;
+        gap: 30px;
+        width: 100%;
+    }
+    
+    .header__menu-item {
+        text-align: center;
+    }
+    
+    .header__menu-link {
+        font-size: 24px;
+    }
+    
+    /* Отключение анимаций для мобильных устройств */
+    .header__menu-link:after {
+        display: none;
+    }
+    
+    /* Простое подсвечивание активного пункта без анимации */
+    .header__menu-link:active {
+        color: var(--color-primary);
+    }
+    
+    .header__social {
+        display: none;
+    }
+} 

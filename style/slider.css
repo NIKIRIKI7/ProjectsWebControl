@@ -1,0 +1,274 @@
+/* ======================================
+   БЛОК: SLIDER
+   ====================================== */
+
+.section--slider {
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Основной блок слайдера */
+.slider {
+    position: relative;
+    width: 100%;
+    height: 800px;
+}
+
+/* Контейнер слайдера */
+.slider__container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden; /* Важно для скрытия невидимых слайдов */
+}
+
+/* Трек слайдера (контейнер для слайдов) */
+.slider__track {
+    height: 100%;
+    display: flex; /* Добавляем flex для работы JS логики */
+    transition: transform 500ms ease; /* Плавное переключение слайдов */
+    width: 300%; /* По умолчанию для трех слайдов, JS пересчитает точную ширину */
+    will-change: transform; /* Оптимизация производительности */
+}
+
+/* Отдельный слайд */
+.slider__slide {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* Ширина будет устанавливаться через JavaScript */
+}
+
+/* Обертка для изображения */
+.slider__image-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* Изображение слайда */
+.slider__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+}
+
+/* Затемняющий слой */
+.slider__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(34, 30, 31, 0.6);
+    z-index: 2;
+}
+
+/* Контент слайда */
+.slider__content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    padding: 0 20px;
+    max-width: 800px;
+    width: 100%;
+    margin: 250px 0 0 0;
+}
+
+/* Заголовок слайда */
+.slider__title {
+    color: var(--color-primary);
+    font-family: var(--font-heading);
+    font-weight: bold;
+    font-size: 72px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+/* Кнопка на слайде */
+.slider__button {
+    display: inline-block;
+    font-weight: bold;
+    padding: 21px 40px;
+    font-size: 32px;
+    border: 2px solid var(--color-primary);
+    color: var(--color-text);
+    text-decoration: none;
+    font-family: var(--font-text);
+    transition: all 0.3s ease;
+    background-color: transparent;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(194, 32, 51, 0.3);
+    text-align: center;
+    line-height: 1;
+}
+
+/* Ховер-эффект кнопки */
+.slider__button:hover {
+    background-color: var(--color-primary);
+    box-shadow: 0 0 20px rgba(194, 32, 51, 0.8);
+    transform: translateY(-2px);
+}
+
+/* Контейнер для элементов управления */
+.slider__controls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Чтобы клики проходили через контейнер */
+    z-index: 4;
+}
+
+/* Стрелка навигации */
+.slider__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 5;
+    pointer-events: auto; /* Включаем взаимодействие */
+}
+
+/* Стрелка влево */
+.slider__arrow--prev {
+    left: 20px;
+}
+
+/* Стрелка вправо */
+.slider__arrow--next {
+    right: 20px;
+}
+
+/* Иконка стрелки */
+.slider__arrow-icon {
+    width: 100%;
+    height: 100%;
+    filter: invert(100%) brightness(1.2);
+    transition: transform 0.3s ease;
+}
+
+/* Ховер-эффект стрелки */
+.slider__arrow:hover .slider__arrow-icon {
+    transform: scale(1.2);
+}
+
+/* Индикаторы слайдов */
+.slider__indicators {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    z-index: 5;
+}
+
+/* Индикатор слайда */
+.slider__indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--color-text);
+    opacity: 0.5;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    padding: 0;
+}
+
+/* Активный индикатор */
+.slider__indicator--active,
+.slider__indicator.active {
+    opacity: 1;
+    background-color: var(--color-primary);
+}
+
+/* ======================================
+   МЕДИА-ЗАПРОСЫ - АДАПТИВНОСТЬ SLIDER
+   ====================================== */
+
+/* Ноутбуки (≥1440px и <1920px) */
+@media screen and (min-width: 1440px) and (max-width: 1919px) {
+    .slider {
+        height: 700px;
+    }
+    
+    .slider__title {
+        font-size: 64px;
+    }
+    
+    .slider__button {
+        font-size: 28px;
+    }
+}
+
+/* Планшеты (≥1024px и <1440px) */
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+    .slider {
+        height: 600px;
+    }
+    
+    .slider__title {
+        font-size: 54px;
+    }
+    
+    .slider__button {
+        padding: 18px 30px;
+        font-size: 28px;
+    }
+}
+
+/* Телефоны (<1024px) */
+@media screen and (max-width: 1023px) {
+    .slider {
+        height: 500px;
+    }
+    
+    .slider__title {
+        font-size: 42px;
+        margin-bottom: 30px;
+    }
+    
+    .slider__button {
+        padding: 15px 25px;
+        font-size: 20px;
+    }
+    
+    .slider__arrow {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Маленькие телефоны (<576px) */
+@media screen and (max-width: 575px) {
+    .slider {
+        height: 400px;
+    }
+    
+    .slider__title {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+    
+    .slider__button {
+        padding: 12px 20px;
+        font-size: 18px;
+    }
+} 
