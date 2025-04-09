@@ -1,0 +1,55 @@
+/* This stylesheet for Unbounded font */
+
+@font-face {
+    font-family: 'Unbounded';
+    src: local('Unbounded Regular'), local('Unbounded-Regular'),
+        url('Unbounded-Regular.woff2') format('woff2'),
+        url('Unbounded-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Unbounded';
+    src: local('Unbounded Light'), local('Unbounded-Light'),
+        url('Unbounded-Light.woff2') format('woff2'),
+        url('Unbounded-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Unbounded';
+    src: local('Unbounded Medium'), local('Unbounded-Medium'),
+        url('Unbounded-Medium.woff2') format('woff2'),
+        url('Unbounded-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Unbounded';
+    src: local('Unbounded Bold'), local('Unbounded-Bold'),
+        url('Unbounded-Bold.woff2') format('woff2'),
+        url('Unbounded-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Unbounded';
+    src: local('Unbounded Black'), local('Unbounded-Black'),
+        url('Unbounded-Black.woff2') format('woff2'),
+        url('Unbounded-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Unbounded';
+    src: local('Unbounded Blond'), local('Unbounded-Blond'),
+        url('Unbounded-Blond.woff2') format('woff2'),
+        url('Unbounded-Blond.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+} 

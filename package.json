@@ -1,0 +1,25 @@
+{
+  "name": "controlweb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "convert-webp": "node convert-to-webp.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NIKIRIKI7/ProjectsWebControl.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/NIKIRIKI7/ProjectsWebControl/issues"
+  },
+  "homepage": "https://github.com/NIKIRIKI7/ProjectsWebControl#readme",
+  "devDependencies": {
+    "sharp": "^0.34.1"
+  }
+}
