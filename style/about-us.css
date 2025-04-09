@@ -1,0 +1,49 @@
+/* ======================================
+   СЕКЦИЯ "О НАС"
+   ====================================== */
+
+.about-us__inner {
+    display: grid;
+    grid-template-columns: 6fr 4fr;
+    gap: 60px;
+}
+
+.about-us__left {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-us__item {
+    margin-bottom: 20px;
+}
+
+.about-us__item h2 {
+    margin-bottom: 15px;
+}
+
+.about-us__divider {
+    border: none;
+    height: 1px;
+    background-color: var(--color-primary);
+    margin: 20px 0;
+}
+
+.about-us__right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+/* Адаптивность для секции "О нас" */
+@media screen and (max-width: 1023px) {
+    .about-us__inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .about-us__right {
+        order: -1;
+    }
+} 
