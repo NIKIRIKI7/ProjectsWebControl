@@ -60,6 +60,7 @@ p {
     font-family: var(--font-heading);
     font-weight: bold;
     color: var(--color-primary);
+    text-align: center;
 }
 
 .title--info {
