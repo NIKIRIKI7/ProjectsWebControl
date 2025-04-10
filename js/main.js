@@ -9,14 +9,16 @@ document.addEventListener('DOMContentLoaded', async function() {
         console.log('DOM загружен, начинаем инициализацию компонентов');
         
         // Динамический импорт модулей
-        const [sliderModule, burgerModule] = await Promise.all([
+        const [sliderModule, burgerModule, questButtonsModule] = await Promise.all([
             import('./modules/slider.js'),
-            import('./modules/burger-menu.js')
+            import('./modules/burger-menu.js'),
+            import('./modules/quest-buttons.js')
         ]);
         
         // Получаем классы из модулей
         const Slider = sliderModule.default;
         const BurgerMenu = burgerModule.default;
+        const QuestButtons = questButtonsModule.default;
         
         console.log('Модули успешно загружены');
         
@@ -25,6 +27,9 @@ document.addEventListener('DOMContentLoaded', async function() {
         
         // Инициализация слайдера
         new Slider();
+        
+        // Инициализация кнопок квестов
+        new QuestButtons();
         
         console.log('Компоненты инициализированы');
     } catch (error) {
