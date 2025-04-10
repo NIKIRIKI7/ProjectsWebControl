@@ -1,0 +1,100 @@
+/* ======================================
+   БЛОК СТАТИСТИКИ
+   ====================================== */
+
+.stats {
+    background-color: var(--color-primary);
+    padding: 40px 0;
+}
+
+.stats__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.stats__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 15px;
+    text-align: center;
+    flex: 1;
+    min-width: 200px;
+}
+
+.stats__icon-container {
+    width: 90px;
+    height: 90px;
+    background-color: #221E1F;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.stats__value {
+    font-family: var(--font-heading);
+    font-weight: bold;
+    font-size: 36px;
+    color: var(--color-text);
+    margin-bottom: 5px;
+}
+
+.stats__label {
+    font-family: var(--font-text);
+    color: var(--color-text);
+    font-size: 20px;
+}
+
+/* Адаптивность */
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+    .stats__icon-container {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .stats__value {
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .stats__inner {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+    }
+    
+    .stats__item {
+        min-width: 160px;
+        flex: 0 0 calc(50% - 30px);
+    }
+    
+    .stats__icon-container {
+        width: 70px;
+        height: 70px;
+    }
+
+    .stats__value {
+        font-size: 28px;
+    }
+    
+    .stats__label {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .stats__item {
+        flex: 0 0 100%;
+        margin-bottom: 20px;
+    }
+    
+    .stats__icon-container {
+        width: 60px;
+        height: 60px;
+    }
+} 

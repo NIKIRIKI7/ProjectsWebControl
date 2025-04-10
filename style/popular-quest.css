@@ -1,0 +1,173 @@
+.popular-quest__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.popular-quest__row:nth-child(1) {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+/* Контейнер для карточки квеста */
+.popular-quest__item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 25px;
+    transition: transform 0.3s ease, box-shadow 0.4s ease;
+}
+
+.popular-quest__item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.popular-quest__items {
+    display: grid;
+    gap: 20px;
+}
+
+/* Изображение в карточке */
+.popular-quest__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 25px;
+    transition: filter 0.3s ease;
+}
+
+.popular-quest__item:hover .popular-quest__image {
+    filter: brightness(1.1);
+}
+
+/* Оверлей для карточки */
+.popular-quest__overlay {
+    position: absolute;
+    border-radius: 25px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0) 80%);
+    transition: background 0.3s ease;
+}
+
+.popular-quest__item:hover .popular-quest__overlay {
+    background: linear-gradient(to top, rgba(194, 32, 51, 0.6) 0%, rgba(0, 0, 0, 0.3) 60%, rgba(0, 0, 0, 0) 90%);
+}
+
+/* Кнопка с вопросительным знаком */
+.popular-quest__button {
+    position: absolute;
+    bottom: 30px; /* Отступ снизу 30px */
+    left: 50%; /* Центрирование по горизонтали */
+    transform: translateX(-50%) scale(1); /* Центрирование по горизонтали */
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+    border-radius: 50%;
+    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.4));
+}
+
+.popular-quest__button:hover {
+    transform: translateX(-50%) scale(1.05);
+    filter: drop-shadow(0 0 15px rgba(194, 32, 51, 0.8));
+}
+
+.popular-quest__button:active {
+    transform: translateX(-50%) scale(0.95);
+}
+
+.popular-quest__button img {
+    width: 70px; /* Базовый размер для мобильных устройств */
+    height: 70px;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.popular-quest__item:hover .popular-quest__button img {
+    transform: rotate(5deg);
+}
+
+/* Медиа-запросы для разных размеров экрана */
+@media screen and (max-width: 575px) {
+    .popular-quest__row, 
+    .popular-quest__row:nth-child(1) {
+        grid-template-columns: 1fr;
+    }
+    
+    .popular-quest__item {
+        min-height: 250px;
+    }
+    
+    .popular-quest__button {
+        bottom: 20px;
+    }
+    
+    .popular-quest__button img {
+        width: 65px;
+        height: 65px;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .popular-quest__row, 
+    .popular-quest__row:nth-child(1) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+    .popular-quest__button img {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .popular-quest__item {
+        min-height: 200px;
+    }
+    
+    .popular-quest__overlay {
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 60%, rgba(0, 0, 0, 0) 90%);
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+    .popular-quest__button {
+        bottom: 25px;
+    }
+    
+    .popular-quest__button img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/* Ноутбуки (≥1440px) */
+@media screen and (min-width: 1440px) {
+    .popular-quest__button {
+        bottom: 30px;
+    }
+    
+    .popular-quest__button img {
+        width: 110px;
+        height: 110px;
+    }
+}
+
+/* Большие мониторы (≥1920px) */
+@media screen and (min-width: 1920px) {
+    .popular-quest__button {
+        bottom: 35px;
+    }
+    
+    .popular-quest__button img {
+        width: 116px;
+        height: 116px;
+    }
+}
