@@ -10,9 +10,9 @@ document.addEventListener('DOMContentLoaded', async function() {
         
         // Динамический импорт модулей
         const [sliderModule, burgerModule, questButtonsModule] = await Promise.all([
-            import('./modules/slider.js'),
-            import('./modules/burger-menu.js'),
-            import('./modules/quest-buttons.js')
+            import('./components/slider.js'),
+            import('./components/burger-menu.js'),
+            import('./components/quest-buttons.js')
         ]);
         
         // Получаем классы из модулей

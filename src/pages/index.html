@@ -6,24 +6,25 @@
     <title>ControlWeb</title>
     
     <!-- Подключение шрифтов -->
-    <link rel="stylesheet" href="fonts/Lato/stylesheet.css">
-    <link rel="stylesheet" href="fonts/Unbounded/stylesheet.css">
+    <link rel="stylesheet" href="../../public/fonts/Lato/stylesheet.css">
+    <link rel="stylesheet" href="../../public/fonts/Unbounded/stylesheet.css">
     
     <!-- Подключение стилей -->
-    <link rel="stylesheet" href="style/reset.css">
-    <link rel="stylesheet" href="style/utils.css">
-    <link rel="stylesheet" href="style/header.css">
-    <link rel="stylesheet" href="style/main.css">
-    <link rel="stylesheet" href="style/slider.css">
-    <link rel="stylesheet" href="style/about-us.css">
-    <link rel="stylesheet" href="style/popular-quest.css">
-    <link rel="stylesheet" href="style/stats.css">
+    <link rel="stylesheet" href="../styles/base/reset.css">
+    <link rel="stylesheet" href="../styles/utils/utils.css">
+    <link rel="stylesheet" href="../styles/layouts/header.css">
+    <link rel="stylesheet" href="../styles/layouts/footer.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/components/slider.css">
+    <link rel="stylesheet" href="../styles/components/about-us.css">
+    <link rel="stylesheet" href="../styles/components/popular-quest.css">
+    <link rel="stylesheet" href="../styles/components/stats.css">
     
     <!-- Предзагрузка шрифтов для оптимизации -->
-    <link rel="preload" href="fonts/Unbounded/Unbounded-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="fonts/Unbounded/Unbounded-Bold.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="fonts/Lato/Lato-Regular.woff" as="font" type="font/woff" crossorigin>
-    <link rel="preload" href="fonts/Lato/Lato-Bold.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="../../public/fonts/Unbounded/Unbounded-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../public/fonts/Unbounded/Unbounded-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../public/fonts/Lato/Lato-Regular.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="../../public/fonts/Lato/Lato-Bold.woff" as="font" type="font/woff" crossorigin>
 </head>
 <body>
     <header class="header">
@@ -31,7 +32,7 @@
             <div class="header__inner">
                 <a href="index.html" class="header__logo-link">
                     <div class="header__logo">
-                        <img class="header__logo-image" src="img/svg/logo.svg" alt="Логотип Карнавал Нечести">
+                        <img class="header__logo-image" src="../../public/img/svg/logo.svg" alt="Логотип Карнавал Нечести">
                         <div class="header__title">
                             <span class="header__title-top">Карнавал</span>
                             <span class="header__title-bottom">Нечести</span>
@@ -55,13 +56,13 @@
                 </nav>
                 <div class="header__social">
                     <a href="#" class="header__social-link header__social-link--vk">
-                        <img class="header__social-icon" src="img/svg/header_vk.svg" alt="ВКонтакте">
+                        <img class="header__social-icon" src="../../public/img/svg/header_vk.svg" alt="ВКонтакте">
                     </a>
                     <a href="#" class="header__social-link header__social-link--telegram">
-                        <img class="header__social-icon" src="img/svg/header_telegram.svg" alt="Telegram">
+                        <img class="header__social-icon" src="../../public/img/svg/header_telegram.svg" alt="Telegram">
                     </a>
                     <a href="#" class="header__social-link header__social-link--instagram">
-                        <img class="header__social-icon" src="img/svg/header_instagram.svg" alt="Instagram">
+                        <img class="header__social-icon" src="../../public/img/svg/header_instagram.svg" alt="Instagram">
                     </a>
                 </div>
             </div>
@@ -81,7 +82,7 @@
                                 <a href="#" class="slider__button">Узнать подробнее</a>
                             </div>
                             <div class="slider__image-wrapper">
-                                <img src="img/main_page/main_01.webp" alt="Квест" class="slider__image">
+                                <img src="../../public/img/main_page/main_01.webp" alt="Квест" class="slider__image">
                             </div>
                             <div class="slider__overlay"></div>
                         </article>
@@ -93,7 +94,7 @@
                                 <a href="#" class="slider__button">Забронировать</a>
                             </div>
                             <div class="slider__image-wrapper">
-                                <img src="img/main_page/popular_01.webp" alt="Квест" class="slider__image">
+                                <img src="../../public/img/main_page/popular_01.webp" alt="Квест" class="slider__image">
                             </div>
                             <div class="slider__overlay"></div>
                         </article>
@@ -105,7 +106,7 @@
                                 <a href="#" class="slider__button">Выбрать время</a>
                             </div>
                             <div class="slider__image-wrapper">
-                                <img src="img/main_page/popular_02.webp" alt="Квест" class="slider__image">
+                                <img src="../../public/img/main_page/popular_02.webp" alt="Квест" class="slider__image">
                             </div>
                             <div class="slider__overlay"></div>
                         </article>
@@ -115,10 +116,10 @@
                     <div class="slider__controls">
                         <!-- Стрелки навигации -->
                         <button class="slider__arrow slider__arrow--prev" aria-label="Предыдущий слайд">
-                            <img src="img/svg/arrow-left.svg" alt="" class="slider__arrow-icon">
+                            <img src="../../public/img/svg/arrow-left.svg" alt="" class="slider__arrow-icon">
                         </button>
                         <button class="slider__arrow slider__arrow--next" aria-label="Следующий слайд">
-                            <img src="img/svg/arrow-right.svg" alt="" class="slider__arrow-icon">
+                            <img src="../../public/img/svg/arrow-right.svg" alt="" class="slider__arrow-icon">
                         </button>
                     </div>
                     
@@ -165,23 +166,23 @@
                     <div class="popular-quest__items">
                         <div class="popular-quest__row">
                             <div class="popular-quest__item">
-                                <img src="img/main_page/popular_01.webp" alt="Квест" class="popular-quest__image">
+                                <img src="../../public/img/main_page/popular_01.webp" alt="Квест" class="popular-quest__image">
                                 <button class="popular-quest__button" aria-label="Подробнее о квесте">
-                                <img src="img/svg/btn__question.svg" alt="?">
+                                <img src="../../public/img/svg/btn__question.svg" alt="?">
                             </button>
                             <div class="popular-quest__overlay"></div>
                         </div>
                         <div class="popular-quest__item">
-                            <img src="img/main_page/popular_02.webp" alt="Квест" class="popular-quest__image">
+                            <img src="../../public/img/main_page/popular_02.webp" alt="Квест" class="popular-quest__image">
                             <button class="popular-quest__button" aria-label="Подробнее о квесте">
-                                <img src="img/svg/btn__question.svg" alt="?">
+                                <img src="../../public/img/svg/btn__question.svg" alt="?">
                             </button>
                             <div class="popular-quest__overlay"></div>
                         </div>
                         <div class="popular-quest__item">
-                            <img src="img/main_page/popular_03.webp" alt="Квест" class="popular-quest__image">
+                            <img src="../../public/img/main_page/popular_03.webp" alt="Квест" class="popular-quest__image">
                             <button class="popular-quest__button" aria-label="Подробнее о квесте">
-                                <img src="img/svg/btn__question.svg" alt="?">
+                                <img src="../../public/img/svg/btn__question.svg" alt="?">
                             </button>
                             <div class="popular-quest__overlay"></div>
                         </div>
@@ -189,23 +190,23 @@
 
                         <div class="popular-quest__row">
                             <div class="popular-quest__item">
-                                <img src="img/main_page/popular_04.webp" alt="Квест" class="popular-quest__image">
+                                <img src="../../public/img/main_page/popular_04.webp" alt="Квест" class="popular-quest__image">
                                 <button class="popular-quest__button" aria-label="Подробнее о квесте">
-                                <img src="img/svg/btn__question.svg" alt="?">
+                                <img src="../../public/img/svg/btn__question.svg" alt="?">
                             </button>
                             <div class="popular-quest__overlay"></div>
                         </div>
                         <div class="popular-quest__item">
-                            <img src="img/main_page/popular_05.webp" alt="Квест" class="popular-quest__image">
+                            <img src="../../public/img/main_page/popular_05.webp" alt="Квест" class="popular-quest__image">
                             <button class="popular-quest__button" aria-label="Подробнее о квесте">
-                                <img src="img/svg/btn__question.svg" alt="?">
+                                <img src="../../public/img/svg/btn__question.svg" alt="?">
                             </button>
                             <div class="popular-quest__overlay"></div>
                         </div>
                         <div class="popular-quest__item">
-                            <img src="img/main_page/popular_06.webp" alt="Квест" class="popular-quest__image">
+                            <img src="../../public/img/main_page/popular_06.webp" alt="Квест" class="popular-quest__image">
                             <button class="popular-quest__button" aria-label="Подробнее о квесте">
-                                <img src="img/svg/btn__question.svg" alt="?">
+                                <img src="../../public/img/svg/btn__question.svg" alt="?">
                             </button>
                             <div class="popular-quest__overlay"></div>
                         </div>
@@ -219,7 +220,7 @@
                 <div class="stats__inner">
                     <div class="stats__item">
                         <div class="stats__icon-container">
-                            <img src="img/svg/number_of_locations_dark.svg" alt="Локации" class="stats__icon">
+                            <img src="../../public/img/svg/number_of_locations_dark.svg" alt="Локации" class="stats__icon">
                         </div>
                         <div class="stats__value">8</div>
                         <div class="stats__label">Количество локаций</div>
@@ -227,7 +228,7 @@
                     
                     <div class="stats__item">
                         <div class="stats__icon-container">
-                            <img src="img/svg/number_of_actors_dark.svg" alt="Актеры" class="stats__icon">
+                            <img src="../../public/img/svg/number_of_actors_dark.svg" alt="Актеры" class="stats__icon">
                         </div>
                         <div class="stats__value">8</div>
                         <div class="stats__label">Количество актеров</div>
@@ -235,7 +236,7 @@
                     
                     <div class="stats__item">
                         <div class="stats__icon-container">
-                            <img src="img/svg/number_of_quests_dark.svg" alt="Квесты" class="stats__icon">
+                            <img src="../../public/img/svg/number_of_quests_dark.svg" alt="Квесты" class="stats__icon">
                         </div>
                         <div class="stats__value">8</div>
                         <div class="stats__label">Количество квестов</div>
@@ -243,7 +244,7 @@
                     
                     <div class="stats__item">
                         <div class="stats__icon-container">
-                            <img src="img/svg/number_of_players_dark.svg" alt="Игроки" class="stats__icon">
+                            <img src="../../public/img/svg/number_of_players_dark.svg" alt="Игроки" class="stats__icon">
                         </div>
                         <div class="stats__value">3-30</div>
                         <div class="stats__label">Количество игроков</div>
@@ -251,7 +252,83 @@
                 </div>
             </div>
         </section>
+
+        <!-- Секция с картой -->
+        <section class="section map-section">
+            <div class="container">
+                <div class="map-section__inner">
+                    <h2 class="title">Наше местоположение</h2>
+                    <div class="map-container">
+                        <div id="yandex-map" class="yandex-map"></div>
+                        <div class="map-info">
+                            <div class="map-info__address">
+                                <img src="../../public/img/svg/location-icon.svg" alt="Адрес" class="map-info__icon">
+                                <span>город Оренбург, улица Мусы Джалиля, дом 6</span>
+                            </div>
+                            <a href="#" class="map-info__button">
+                                <span>Отправить заявку</span>
+                                <img src="../../public/img/svg/telegram.svg" alt="Телеграм" class="map-info__button-icon">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <!-- Подключение API Яндекс.Карт -->
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    
+    <!-- Инициализация карты -->
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            // Функция загрузки карты
+            function initMap() {
+                // Проверяем, загружен ли API Яндекс.Карт
+                if (typeof ymaps !== 'undefined') {
+                    ymaps.ready(function() {
+                        // Координаты Оренбурга, ул. Мусы Джалиля, дом 6
+                        const coords = [51.768199, 55.096955];
+                        
+                        // Создаем карту с темной темой
+                        const map = new ymaps.Map('yandex-map', {
+                            center: coords,
+                            zoom: 16,
+                            controls: ['zoomControl', 'geolocationControl']
+                        }, {
+                            searchControlProvider: 'yandex#search'
+                        });
+                        
+                        // Применяем темную тему для карты
+                        map.panes.get('ground').getElement().style.filter = 
+                            'invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%)';
+                        
+                        // Создаем собственную метку
+                        const placemark = new ymaps.Placemark(coords, {
+                            balloonContentHeader: 'Карнавал Нечести',
+                            balloonContentBody: 'город Оренбург, улица Мусы Джалиля, дом 6',
+                            hintContent: 'Карнавал Нечести'
+                        }, {
+                            preset: 'islands#redDotIconWithCaption',
+                            iconColor: '#C22033'
+                        });
+                        
+                        // Добавляем метку на карту
+                        map.geoObjects.add(placemark);
+                        
+                        // Запрещаем скролл карты при скролле страницы
+                        map.behaviors.disable('scrollZoom');
+                        
+                        // Открываем балун при загрузке
+                        placemark.balloon.open();
+                    });
+                }
+            }
+            
+            // Вызываем функцию инициализации карты
+            initMap();
+        });
+    </script>
 
     <!-- Подключение скриптов -->
     <script>
@@ -266,6 +343,58 @@
             document.head.appendChild(polyfill);
         }
     </script>
-    <script src="js/main.js" type="module" defer></script>
+    <script src="../js/main.js" type="module" defer></script>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__left">
+                    <div class="footer__logo">
+                        <img src="../../public/img/svg/logo.svg" alt="Логотип Карнавал Нечести" class="footer__logo-image">
+                        <div class="footer__logo-text">
+                            <span class="footer__logo-text-top">Карнавал</span>
+                            <span class="footer__logo-text-bottom">Нечести</span>
+                        </div>
+                    </div>
+                    <p class="footer__motto">Our vision is to provide convenience<br>and help increase your sales<br>business.</p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link">
+                            <img src="../../public/img/svg/vk-white.svg" alt="ВКонтакте" class="footer__social-icon">
+                        </a>
+                        <a href="#" class="footer__social-link">
+                            <img src="../../public/img/svg/telegram-white.svg" alt="Telegram" class="footer__social-icon">
+                        </a>
+                        <a href="#" class="footer__social-link">
+                            <img src="../../public/img/svg/instagram-white.svg" alt="Instagram" class="footer__social-icon">
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer__center">
+                    <h3 class="footer__title">Адрес</h3>
+                    <address class="footer__address">
+                        город Оренбург,<br>
+                        улица Мусы Джалиля,<br>
+                        дом 6
+                    </address>
+                </div>
+                
+                <div class="footer__right">
+                    <h3 class="footer__title">Контакты</h3>
+                    <a href="tel:+79999999999" class="footer__contact">+7 999 999 99 99</a>
+                    <a href="mailto:normemailman@mail.ru" class="footer__contact">normemailman@mail.ru</a>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <hr class="footer__divider">
+                <div class="footer__credits">
+                    <p class="footer__made-by">Made by:</p>
+                    <p class="footer__author">Nikita Gorobets (...)</p>
+                    <p class="footer__author">Danila Latyshov (...)</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html> 

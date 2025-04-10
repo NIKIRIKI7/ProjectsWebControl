@@ -2,10 +2,12 @@
   "name": "controlweb",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/js/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "convert-webp": "node convert-to-webp.js"
+    "convert-webp": "node convert-to-webp.js",
+    "dev": "http-server . -p 8081 -c-1 --no-cache -o /src/pages/index.html",
+    "stop": "pkill -f http-server || true"
   },
   "repository": {
     "type": "git",
@@ -20,6 +22,7 @@
   },
   "homepage": "https://github.com/NIKIRIKI7/ProjectsWebControl#readme",
   "devDependencies": {
+    "http-server": "^14.1.1",
     "sharp": "^0.34.1"
   }
 }
