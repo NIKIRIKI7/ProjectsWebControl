@@ -2,6 +2,10 @@
 /node_modules
 /.pnp
 .pnp.js
+copy_files_with_code.sh
+copy_log.txt
+combined_web.txt
+backup
 
 # testing
 /coverage
