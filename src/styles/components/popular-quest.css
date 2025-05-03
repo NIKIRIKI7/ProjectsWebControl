@@ -120,7 +120,7 @@
 @media screen and (max-width: 1023px) {
     .popular-quest__row, 
     .popular-quest__row:nth-child(1) {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
     }
     
     .popular-quest__button img {

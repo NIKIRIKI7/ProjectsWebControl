@@ -171,14 +171,14 @@ p {
     }
     
     .container {
-        max-width: calc(800px + 30px);
+        max-width: calc(900px + 30px);
     }
 }
 
 /* Телефоны (<1024px) */
 @media screen and (max-width: 1023px) {
     .title {
-        font-size: 36px;
+        font-size: 34px;
     }
     
     .title--info {
@@ -194,7 +194,7 @@ p {
     }
     
     .container {
-        max-width: calc(400px + 30px);
+        max-width: calc(600px + 30px);
     }
 }
 
