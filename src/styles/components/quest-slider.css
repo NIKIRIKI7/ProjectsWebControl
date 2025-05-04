@@ -1,0 +1,225 @@
+/* ======================================
+   БЛОК: QUEST-SLIDER
+   ====================================== */
+
+.quest-slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    border-radius: 12px;
+}
+
+.quest-slider__container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.quest-slider__track {
+    display: flex;
+    transition: transform 500ms ease-in-out;
+    height: 500px;
+    width: 400%; /* Для 4 слайдов */
+    will-change: transform;
+}
+
+.quest-slider__slide {
+    min-width: 100%;
+    position: relative;
+    overflow: hidden;
+    flex: 1;
+}
+
+.quest-slider__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+    /* Использовать фильтр как в основном слайдере */
+    filter: grayscale(30%);
+}
+
+.quest-slider__slide:hover .quest-slider__image {
+    transform: scale(1.05);
+    filter: grayscale(0%);
+}
+
+.quest-slider__caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 20px;
+    background: rgba(34, 30, 31, 0.7);
+    color: var(--color-text);
+    font-family: var(--font-heading);
+    font-size: 16px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    z-index: 3;
+}
+
+.quest-slider__slide:hover .quest-slider__caption {
+    transform: translateY(0);
+}
+
+/* Навигационные стрелки - используем стиль похожий на основной слайдер */
+.quest-slider__controls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 4;
+}
+
+.quest-slider__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(34, 30, 31, 0.6);
+    border: 2px solid rgba(238, 226, 227, 0.4);
+    color: var(--color-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 0.6;
+    pointer-events: auto;
+    z-index: 5;
+}
+
+.quest-slider__arrow--prev {
+    left: 20px;
+}
+
+.quest-slider__arrow--next {
+    right: 20px;
+}
+
+.quest-slider__arrow:hover {
+    background-color: var(--color-primary);
+    opacity: 1;
+    border-color: var(--color-text);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.quest-slider:hover .quest-slider__arrow {
+    opacity: 0.8;
+}
+
+/* Индикаторы слайдов - стиль как в основном слайдере */
+.quest-slider__indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+    z-index: 10;
+}
+
+.quest-slider__indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--color-text);
+    opacity: 0.5;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.quest-slider__indicator--active {
+    opacity: 1;
+    background-color: var(--color-primary);
+    transform: scale(1.2);
+}
+
+.quest-slider__indicator:hover {
+    opacity: 0.8;
+}
+
+/* Заголовок галереи - используем стили проекта */
+.quest-gallery__title {
+    font-family: var(--font-heading);
+    font-size: 36px;
+    font-weight: bold;
+    color: var(--color-text);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.quest-gallery__title span {
+    color: var(--color-primary);
+}
+
+/* ======================================
+   МЕДИА-ЗАПРОСЫ - АДАПТИВНОСТЬ QUEST-SLIDER
+   ====================================== */
+
+/* Ноутбуки (≥1440px и <1920px) */
+@media screen and (min-width: 1440px) and (max-width: 1919px) {
+    .quest-slider__track {
+        height: 450px;
+    }
+}
+
+/* Планшеты (≥1024px и <1440px) */
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+    .quest-slider__track {
+        height: 400px;
+    }
+}
+
+/* Телефоны (<1024px) */
+@media screen and (max-width: 1023px) {
+    .quest-slider__track {
+        height: 350px;
+    }
+    
+    .quest-slider__arrow {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .quest-slider__caption {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+}
+
+/* Малые телефоны (<576px) */
+@media screen and (max-width: 575px) {
+    .quest-slider__track {
+        height: 250px;
+    }
+    
+    .quest-slider__arrow {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .quest-gallery__title {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    
+    .quest-slider__indicators {
+        gap: 10px;
+    }
+    
+    .quest-slider__indicator {
+        width: 10px;
+        height: 10px;
+    }
+} 

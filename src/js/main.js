@@ -4,6 +4,7 @@
  */
 
 // Используем динамический импорт для повышения совместимости
+
 document.addEventListener('DOMContentLoaded', async function() {
     try {
         console.log('DOM загружен, начинаем инициализацию компонентов');

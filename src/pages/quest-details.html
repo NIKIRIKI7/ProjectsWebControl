@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Название квеста - Карнавал Нечести</title>
+    
+    <!-- Подключение шрифтов -->
+    <link rel="stylesheet" href="../../public/fonts/Lato/stylesheet.css">
+    <link rel="stylesheet" href="../../public/fonts/Unbounded/stylesheet.css">
+    
+    <!-- Подключение стилей -->
+    <link rel="stylesheet" href="../styles/base/reset.css">
+    <link rel="stylesheet" href="../styles/utils/utils.css">
+    <link rel="stylesheet" href="../styles/layouts/header.css">
+    <link rel="stylesheet" href="../styles/layouts/footer.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/components/quest-details.css">
+    <link rel="stylesheet" href="../styles/components/quest-slider.css">
+
+    <script defer src="../js/main.js" type="module"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="header__logo-link">
+                    <div class="header__logo">
+                        <img class="header__logo-image" src="../../public/img/svg/logo.svg" alt="Логотип Карнавал Нечести">
+                        <div class="header__title">
+                            <span class="header__title-top">Карнавал</span>
+                            <span class="header__title-bottom">Нечести</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <button class="header__burger-button">
+                    <span class="header__burger-line"></span>
+                    <span class="header__burger-line"></span>
+                    <span class="header__burger-line"></span>
+                </button>
+                
+                <nav class="header__nav">
+                    <ul class="header__menu">
+                        <li class="header__menu-item"><a href="#" class="header__menu-link">Главная</a></li>
+                        <li class="header__menu-item"><a href="#" class="header__menu-link">Сотрудники</a></li>
+                        <li class="header__menu-item"><a href="#" class="header__menu-link">Квесты</a></li>
+                        <li class="header__menu-item"><a href="#" class="header__menu-link">Услуги</a></li>
+                    </ul>
+                </nav>
+                <div class="header__social">
+                    <a href="#" class="header__social-link header__social-link--vk">
+                        <img class="header__social-icon" src="../../public/img/svg/header_vk.svg" alt="ВКонтакте">
+                    </a>
+                    <a href="#" class="header__social-link header__social-link--telegram">
+                        <img class="header__social-icon" src="../../public/img/svg/header_telegram.svg" alt="Telegram">
+                    </a>
+                    <a href="#" class="header__social-link header__social-link--instagram">
+                        <img class="header__social-icon" src="../../public/img/svg/header_instagram.svg" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Секция с информацией о квесте -->
+        <section class="quest-hero" style="background-image: url('../../public/img/main_page/main_01.webp');">
+            <div class="container">
+                <div class="quest-hero__inner">
+                    <div class="quest-hero__info">
+                        <div class="quest-hero__badge">Премиум-квест</div>
+                        <p class="quest-hero__type">Хоррор-квест</p>
+                        <h1 class="quest-hero__title">Название квеста</h1>
+                        <div class="quest-hero__details">
+                            <div class="quest-hero__age">18+</div>
+                            <div class="quest-hero__price">11000₽</div>
+                            <div class="quest-hero__duration">120 минут</div>
+                            <div class="quest-hero__difficulty">Сложный</div>
+                        </div>
+                        <div class="quest-hero__buttons">
+                            <a href="#" class="button button--primary">Забронировать</a>
+                            <a href="#" class="button button--secondary">Читать</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция с описанием квеста -->
+        <section class="quest-description">
+            <div class="container">
+                <div class="quest-description__inner">
+                    <div class="quest-description__content">
+                        <h2 class="quest-description__title">Описание <span>квеста</span></h2>
+                        <div class="quest-description__text">
+                            <p>Равным образом сложившаяся структура организации позволяет оценить значение существенных финансовых и административных условий. Равным образом укрепление и развитие структуры в значительной степени обуславливает создание форм развития. Равным образом постоянный количественный рост и сфера.</p>
+                            <p>Равным образом сложившаяся структура организации позволяет оценить значение существенных финансовых и административных условий. Равным образом укрепление и развитие структуры в значительной степени обуславливает создание форм развития. Равным образом постоянный количественный рост и сфера.</p>
+                        </div>
+                        <div class="quest-description__features">
+                            <div class="quest-description__feature">
+                                <span class="quest-description__feature-icon">🔍</span>
+                                <span class="quest-description__feature-text">Детективный сюжет</span>
+                            </div>
+                            <div class="quest-description__feature">
+                                <span class="quest-description__feature-icon">👥</span>
+                                <span class="quest-description__feature-text">Командная работа</span>
+                            </div>
+                            <div class="quest-description__feature">
+                                <span class="quest-description__feature-icon">💡</span>
+                                <span class="quest-description__feature-text">Сложные головоломки</span>
+                            </div>
+                            <div class="quest-description__feature">
+                                <span class="quest-description__feature-icon">🔊</span>
+                                <span class="quest-description__feature-text">Звуковые эффекты</span>
+                            </div>
+                            <div class="quest-description__feature">
+                                <span class="quest-description__feature-icon">⏱️</span>
+                                <span class="quest-description__feature-text">Ограниченное время</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция с галереей квеста - Слайдер -->
+        <section class="quest-gallery">
+            <div class="container">
+                <div class="quest-gallery__inner">
+                    <h2 class="quest-gallery__title">Галерея <span>квеста</span></h2>
+                    <div class="quest-slider">
+                        <div class="quest-slider__container">
+                            <div class="quest-slider__track">
+                                <!-- Слайды галереи -->
+                                <div class="quest-slider__slide">
+                                    <img src="../../public/img/main_page/popular_01.webp" alt="Атмосфера квеста" class="quest-slider__image">
+                                    <div class="quest-slider__caption">Загадочная комната</div>
+                                </div>
+                                <div class="quest-slider__slide">
+                                    <img src="../../public/img/main_page/popular_02.webp" alt="Атмосфера квеста" class="quest-slider__image">
+                                    <div class="quest-slider__caption">Тайные послания</div>
+                                </div>
+                                <div class="quest-slider__slide">
+                                    <img src="../../public/img/main_page/popular_03.webp" alt="Атмосфера квеста" class="quest-slider__image">
+                                    <div class="quest-slider__caption">Мистические артефакты</div>
+                                </div>
+                                <div class="quest-slider__slide">
+                                    <img src="../../public/img/main_page/popular_04.webp" alt="Атмосфера квеста" class="quest-slider__image">
+                                    <div class="quest-slider__caption">Странные символы</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Навигация слайдера -->
+                            <div class="quest-slider__controls">
+                                <button class="quest-slider__arrow quest-slider__arrow--prev" aria-label="Предыдущий слайд">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                                <button class="quest-slider__arrow quest-slider__arrow--next" aria-label="Следующий слайд">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            
+                            <!-- Индикаторы слайдов -->
+                            <div class="quest-slider__indicators">
+                                <button class="quest-slider__indicator quest-slider__indicator--active" data-slide="0" aria-label="Перейти к слайду 1"></button>
+                                <button class="quest-slider__indicator" data-slide="1" aria-label="Перейти к слайду 2"></button>
+                                <button class="quest-slider__indicator" data-slide="2" aria-label="Перейти к слайду 3"></button>
+                                <button class="quest-slider__indicator" data-slide="3" aria-label="Перейти к слайду 4"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция с отзывами клиентов -->
+        <section class="reviews">
+            <div class="container">
+                <div class="reviews__inner">
+                    <h2 class="reviews__title">Отзывы <span>клиентов</span></h2>
+                    <div class="reviews__video">
+                        <div class="reviews__video-container">
+                            <img src="../../public/img/main_page/main_01.webp" alt="Превью видео" class="reviews__video-preview">
+                            <button class="reviews__video-play">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 3L19 12L5 21V3Z" fill="currentColor"/>
+                                </svg>
+                            </button>
+                            <div class="reviews__video-overlay"></div>
+                        </div>
+                    </div>
+                    <!-- Добавляем текстовые отзывы -->
+                    <div class="reviews__testimonials">
+                        <div class="reviews__testimonial">
+                            <div class="reviews__testimonial-avatar">
+                                <img src="../../public/img/main_page/popular_05.webp" alt="Аватар клиента" class="reviews__testimonial-img">
+                            </div>
+                            <div class="reviews__testimonial-content">
+                                <div class="reviews__testimonial-rating">
+                                    <span class="reviews__testimonial-star">★</span>
+                                    <span class="reviews__testimonial-star">★</span>
+                                    <span class="reviews__testimonial-star">★</span>
+                                    <span class="reviews__testimonial-star">★</span>
+                                    <span class="reviews__testimonial-star">★</span>
+                                </div>
+                                <h3 class="reviews__testimonial-name">Алексей С.</h3>
+                                <p class="reviews__testimonial-text">"Потрясающий квест! Атмосфера затягивает с первых минут. Загадки заставляют напрячь мозги, но решаемы. Однозначно стоит своих денег!"</p>
+                            </div>
+                        </div>
+                        <div class="reviews__testimonial">
+                            <div class="reviews__testimonial-avatar">
+                                <img src="../../public/img/main_page/popular_04.webp" alt="Аватар клиента" class="reviews__testimonial-img">
+                            </div>
+                            <div class="reviews__testimonial-content">
+                                <div class="reviews__testimonial-rating">
+                                    <span class="reviews__testimonial-star">★</span>
+                                    <span class="reviews__testimonial-star">★</span>
+                                    <span class="reviews__testimonial-star">★</span>
+                                    <span class="reviews__testimonial-star">★</span>
+                                    <span class="reviews__testimonial-star reviews__testimonial-star--empty">★</span>
+                                </div>
+                                <h3 class="reviews__testimonial-name">Мария К.</h3>
+                                <p class="reviews__testimonial-text">"Ходила с друзьями, было очень весело и страшно одновременно. Некоторые загадки показались слишком сложными, но атмосфера просто супер!"</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция с другими квестами -->
+        <section class="other-quests">
+            <div class="container">
+                <div class="other-quests__inner">
+                    <h2 class="other-quests__title">Другие <span>квесты</span></h2>
+                    <p class="other-quests__subtitle">Список всех квестов</p>
+                    <div class="other-quests__grid">
+                        <div class="other-quests__item">
+                            <div class="other-quests__image-container">
+                                <img src="../../public/img/main_page/popular_01.webp" alt="Квест" class="other-quests__image">
+                                <div class="other-quests__badge">ТОП</div>
+                                <div class="other-quests__overlay"></div>
+                            </div>
+                            <div class="other-quests__content">
+                                <h3 class="other-quests__name">Дом с привидениями</h3>
+                                <div class="other-quests__info">
+                                    <span class="other-quests__difficulty">Средний</span>
+                                    <span class="other-quests__duration">90 мин</span>
+                                </div>
+                                <a href="#" class="other-quests__link">Узнать подробнее</a>
+                            </div>
+                        </div>
+                        <div class="other-quests__item">
+                            <div class="other-quests__image-container">
+                                <img src="../../public/img/main_page/popular_02.webp" alt="Квест" class="other-quests__image">
+                                <div class="other-quests__overlay"></div>
+                            </div>
+                            <div class="other-quests__content">
+                                <h3 class="other-quests__name">Подземелье</h3>
+                                <div class="other-quests__info">
+                                    <span class="other-quests__difficulty">Сложный</span>
+                                    <span class="other-quests__duration">120 мин</span>
+                                </div>
+                                <a href="#" class="other-quests__link">Узнать подробнее</a>
+                            </div>
+                        </div>
+                        <div class="other-quests__item">
+                            <div class="other-quests__image-container">
+                                <img src="../../public/img/main_page/popular_03.webp" alt="Квест" class="other-quests__image">
+                                <div class="other-quests__badge">НОВИНКА</div>
+                                <div class="other-quests__overlay"></div>
+                            </div>
+                            <div class="other-quests__content">
+                                <h3 class="other-quests__name">Психбольница</h3>
+                                <div class="other-quests__info">
+                                    <span class="other-quests__difficulty">Сложный</span>
+                                    <span class="other-quests__duration">100 мин</span>
+                                </div>
+                                <a href="#" class="other-quests__link">Узнать подробнее</a>
+                            </div>
+                        </div>
+                        <div class="other-quests__item">
+                            <div class="other-quests__image-container">
+                                <img src="../../public/img/main_page/popular_05.webp" alt="Квест" class="other-quests__image">
+                                <div class="other-quests__overlay"></div>
+                            </div>
+                            <div class="other-quests__content">
+                                <h3 class="other-quests__name">Тайны леса</h3>
+                                <div class="other-quests__info">
+                                    <span class="other-quests__difficulty">Средний</span>
+                                    <span class="other-quests__duration">90 мин</span>
+                                </div>
+                                <a href="#" class="other-quests__link">Узнать подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция с картой -->
+        <section class="map-section">
+            <div class="container">
+                <div class="map-container">
+                    <div class="yandex-map">
+                        <!-- Вместо iframe с Яндекс Картой используем изображение-заглушку -->
+                        <img src="../../public/img/main_page/map_placeholder.jpg" alt="Карта местоположения" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div class="map-popup">
+                            <h3 class="map-popup__title">Оперный театр</h3>
+                            <p class="map-popup__address">Содружества Великих</p>
+                            <p class="map-popup__floor">Подвал</p>
+                        </div>
+                    </div>
+                    <div class="map-info">
+                        <div class="map-info__address">
+                            <svg class="map-info__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z" fill="currentColor"/>
+                            </svg>
+                            город Оренбург: улица Мира-Дежнёва, дом 6
+                        </div>
+                        <a href="#" class="map-info__button">
+                            <svg class="map-info__button-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V11H13V17ZM13 9H11V7H13V9Z" fill="currentColor"/>
+                            </svg>
+                            Отправить заявку
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__left">
+                    <a href="index.html" class="footer__logo-link">
+                        <div class="footer__logo">
+                            <img class="footer__logo-image" src="../../public/img/svg/logo.svg" alt="Логотип Карнавал Нечести">
+                            <div class="footer__title">
+                                <span class="footer__title-top">Карнавал</span>
+                                <span class="footer__title-bottom">Нечести</span>
+                            </div>
+                        </div>
+                    </a>
+                    <p class="footer__description">
+                        Our vision is to provide convenience and help increase your sales business.
+                    </p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link footer__social-link--vk">
+                            <img class="footer__social-icon" src="../../public/img/svg/header_vk.svg" alt="ВКонтакте">
+                        </a>
+                        <a href="#" class="footer__social-link footer__social-link--telegram">
+                            <img class="footer__social-icon" src="../../public/img/svg/header_telegram.svg" alt="Telegram">
+                        </a>
+                        <a href="#" class="footer__social-link footer__social-link--instagram">
+                            <img class="footer__social-icon" src="../../public/img/svg/header_instagram.svg" alt="Instagram">
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__center">
+                    <h3 class="footer__heading">Адрес</h3>
+                    <p class="footer__address">
+                        город Оренбург:<br>
+                        улица Мира-Дежнёва,<br>
+                        дом 6
+                    </p>
+                </div>
+                <div class="footer__right">
+                    <h3 class="footer__heading">Контакты</h3>
+                    <a href="tel:+79999999999" class="footer__contact">+7 999 999 99 99</a>
+                    <a href="mailto:example@example.ru" class="footer__contact">example@example.ru</a>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <div class="footer__copyright">
+                    <p>Made by</p>
+                    <p>Nikita Gandilov (—)</p>
+                    <p>Daniel Lipatnikov (—)</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Скрипт для инициализации слайдера -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Переменные для слайдера
+            const slider = document.querySelector('.quest-slider');
+            const sliderTrack = slider.querySelector('.quest-slider__track');
+            const slides = slider.querySelectorAll('.quest-slider__slide');
+            const prevBtn = slider.querySelector('.quest-slider__arrow--prev');
+            const nextBtn = slider.querySelector('.quest-slider__arrow--next');
+            const indicators = slider.querySelectorAll('.quest-slider__indicator');
+            
+            let currentSlide = 0;
+            const slideCount = slides.length;
+            
+            // Функция для обновления активного слайда
+            function updateSlider() {
+                // Перемещение слайдов
+                sliderTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+                
+                // Обновление индикаторов
+                indicators.forEach((indicator, index) => {
+                    if (index === currentSlide) {
+                        indicator.classList.add('quest-slider__indicator--active');
+                    } else {
+                        indicator.classList.remove('quest-slider__indicator--active');
+                    }
+                });
+            }
+            
+            // Обработчики для кнопок
+            prevBtn.addEventListener('click', function() {
+                currentSlide = (currentSlide - 1 + slideCount) % slideCount;
+                updateSlider();
+            });
+            
+            nextBtn.addEventListener('click', function() {
+                currentSlide = (currentSlide + 1) % slideCount;
+                updateSlider();
+            });
+            
+            // Обработчики для индикаторов
+            indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', function() {
+                    currentSlide = index;
+                    updateSlider();
+                });
+            });
+            
+            // Автоматическое переключение слайдов
+            setInterval(function() {
+                currentSlide = (currentSlide + 1) % slideCount;
+                updateSlider();
+            }, 5000);
+        });
+    </script>
+</body>
+</html> 

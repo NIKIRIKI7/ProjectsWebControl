@@ -22,7 +22,16 @@
   },
   "homepage": "https://github.com/NIKIRIKI7/ProjectsWebControl#readme",
   "devDependencies": {
+    "css-loader": "^7.1.2",
+    "html-loader": "^5.1.0",
+    "html-webpack-plugin": "^5.6.3",
     "http-server": "^14.1.1",
-    "sharp": "^0.34.1"
+    "sharp": "^0.34.1",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.99.7",
+    "webpack-cli": "^6.0.1"
+  },
+  "dependencies": {
+    "copy-webpack-plugin": "^13.0.0"
   }
 }
