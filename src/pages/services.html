@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ControlWeb</title>
+  <title>ControlWeb - Услуги</title>
   <!-- Подключение шрифтов -->
   <link rel="stylesheet" href="../../public/fonts/Lato/stylesheet.css">
   <link rel="stylesheet" href="../../public/fonts/Unbounded/stylesheet.css">
@@ -15,161 +16,195 @@
   <link rel="stylesheet" href="../styles/main.css">
   <link rel="stylesheet" href="../styles/components/services.css">
   <!-- Предзагрузка шрифтов -->
-  <link rel="preload" href="../../public/fonts/Unbounded/Unbounded-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../../public/fonts/Unbounded/Unbounded-Regular.woff2" as="font" type="font/woff2"
+    crossorigin>
   <link rel="preload" href="../../public/fonts/Unbounded/Unbounded-Bold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="../../public/fonts/Lato/Lato-Regular.woff" as="font" type="font/woff" crossorigin>
   <link rel="preload" href="../../public/fonts/Lato/Lato-Bold.woff" as="font" type="font/woff" crossorigin>
 </head>
+
 <body>
-<!-- Header -->
-<header class="header">
-  <div class="container">
-    <div class="header__inner">
-      <a href="index.html" class="header__logo-link">
-        <div class="header__logo">
-          <img class="header__logo-image" src="../../public/img/svg/logo.svg" alt="Логотип Карнавал Нечести">
-          <div class="header__title">
-            <span class="header__title-top">Карнавал</span>
-            <span class="header__title-bottom">Нечести</span>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="index.html" class="header__logo-link">
+          <div class="header__logo">
+            <img class="header__logo-image" src="../../public/img/svg/logo.svg" alt="Логотип Карнавал Нечести">
+            <div class="header__title">
+              <span class="header__title-top">Карнавал</span>
+              <span class="header__title-bottom">Нечести</span>
+            </div>
+          </div>
+        </a>
+        <button class="header__burger-button">
+          <span class="header__burger-line"></span>
+          <span class="header__burger-line"></span>
+          <span class="header__burger-line"></span>
+        </button>
+        <nav class="header__nav">
+          <ul class="header__menu">
+            <li class="header__menu-item"><a href="index.html" class="header__menu-link">Главная</a></li>
+            <li class="header__menu-item"><a href="employees.html" class="header__menu-link">Сотрудники</a></li>
+            <li class="header__menu-item"><a href="#" class="header__menu-link">Квесты</a></li>
+            <li class="header__menu-item"><a href="services.html" class="header__menu-link active">Услуги</a></li>
+          </ul>
+        </nav>
+        <div class="header__social">
+          <a href="#" class="header__social-link header__social-link--vk">
+            <img class="header__social-icon" src="../../public/img/svg/header_vk.svg" alt="ВКонтакте">
+          </a>
+          <a href="#" class="header__social-link header__social-link--telegram">
+            <img class="header__social-icon" src="../../public/img/svg/header_telegram.svg" alt="Telegram">
+          </a>
+          <a href="#" class="header__social-link header__social-link--instagram">
+            <img class="header__social-icon" src="../../public/img/svg/header_instagram.svg" alt="Instagram">
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <section class="services">
+      <div class="container">
+        <div class="services__header">
+          <h2 class="services__title">
+            <span class="services__title-white">Наши</span>
+            <span class="services__title-red">услуги</span>
+          </h2>
+          <div class="services__controls">
+            <button class="services__arrow services__arrow--prev">
+              <img src="../../public/img/svg/arrow__left.svg" alt="←" class="services__arrow-icon">
+            </button>
+            <button class="services__arrow services__arrow--next">
+              <img src="../../public/img/svg/arrow__right.svg" alt="→" class="services__arrow-icon">
+            </button>
           </div>
         </div>
-      </a>
-      <button class="header__burger-button">
-        <span class="header__burger-line"></span>
-        <span class="header__burger-line"></span>
-        <span class="header__burger-line"></span>
-      </button>
-      <nav class="header__nav">
-        <ul class="header__menu">
-          <li class="header__menu-item"><a href="index.html" class="header__menu-link">Главная</a></li>
-          <li class="header__menu-item"><a href="employees.html" class="header__menu-link">Сотрудники</a></li>
-          <li class="header__menu-item"><a href="#" class="header__menu-link">Квесты</a></li>
-          <li class="header__menu-item"><a href="employees.html" class="header__menu-link">Услуги</a></li>
-        </ul>
-      </nav>
-      <div class="header__social">
-        <a href="#" class="header__social-link header__social-link--vk">
-          <img class="header__social-icon" src="../../public/img/svg/header_vk.svg" alt="ВКонтакте">
-        </a>
-        <a href="#" class="header__social-link header__social-link--telegram">
-          <img class="header__social-icon" src="../../public/img/svg/header_telegram.svg" alt="Telegram">
-        </a>
-        <a href="#" class="header__social-link header__social-link--instagram">
-          <img class="header__social-icon" src="../../public/img/svg/header_instagram.svg" alt="Instagram">
-        </a>
-      </div>
-    </div>
-  </div>
-</header>
 
-<!-- Main Content -->
-<main class="services">
-  <div class="container">
-    <div class="services__header">
-      <h2 class="services__title">
-        <span class="services__title-white">Наши</span>
-        <span class="services__title-red">услуги</span>
-      </h2>
-      <div class="services__controls">
-        <button class="services__arrow services__arrow--prev">
-          <img src="../../public/img/svg/arrow__left.svg" alt="←" class="services__arrow-icon">
-        </button>
-        <button class="services__arrow services__arrow--next">
-          <img src="../../public/img/svg/arrow__right.svg" alt="→" class="services__arrow-icon">
-        </button>
-      </div>
-    </div>
-
-    <!-- Блок услуг -->
-    <div class="services__content">
-      <!-- Услуга 1 -->
-      <div class="service-item">
-        <div class="service-info">
-          <h3 class="service-name">Название услуги</h3>
-          <p class="service-description">
-            Равным образом сложившаяся структура организации позволяет оценить значение существенных финансовых и административных условий. Равным образом укрепление и развитие структуры в значительной степени обуславливает создание форм развития. Равным образом постоянный количественный рост и сфера.
-          </p>
-          <a href="#" class="map-info__button service-button">
-            <span>Отправить заявку</span>
-            <img src="../../public/img/svg/telegram.svg" alt="Телеграм" class="map-info__button-icon">
-          </a>
-        </div>
-        <div class="service-image">
-          <img src="../../public/img/services/serv.png" alt="Услуга 1">
-        </div>
-      </div>
-
-      <!-- Услуга 2 -->
-      <div class="service-item">
-        <div class="service-info">
-          <h3 class="service-name">Название услуги</h3>
-          <p class="service-description">
-            Равным образом сложившаяся структура организации позволяет оценить значение существенных финансовых и административных условий. Равным образом укрепление и развитие структуры в значительной степени обуславливает создание форм развития. Равным образом постоянный количественный рост и сфера.
-          </p>
-          <a href="#" class="map-info__button service-button">
-            <span>Отправить заявку</span>
-            <img src="../../public/img/svg/telegram.svg" alt="Телеграм" class="map-info__button-icon">
-          </a>
-        </div>
-        <div class="service-image">
-          <img src="../../public/img/services/serv.png" alt="Услуга 2">
-        </div>
-      </div>
-    </div>
-  </div>
-</main>
-
-<!-- Footer -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer__inner">
-      <div class="footer__left">
-        <div class="footer__logo">
-          <img src="../../public/img/svg/logo.svg" alt="Логотип Карнавал Нечести" class="footer__logo-image">
-          <div class="footer__logo-text">
-            <span class="footer__logo-text-top">Карнавал</span>
-            <span class="footer__logo-text-bottom">Нечести</span>
+        <!-- Блок услуг -->
+        <div class="services__content">
+          <!-- Услуга 1 -->
+          <div class="service-item">
+            <div class="service-image">
+              <img src="../../public/img/services/serv.png" alt="Услуга 1">
+            </div>
+            <div class="service-info">
+              <h3 class="service-name">Название услуги</h3>
+              <p class="service-description">
+                Равным образом сложившаяся структура организации позволяет оценить значение существенных финансовых и
+                административных условий. Равным образом укрепление и развитие структуры в значительной степени
+                обуславливает создание форм развития. Равным образом постоянный количественный рост и сфера.
+              </p>
+              <a href="#" class="map-info__button service-button">
+                <span>Отправить заявку</span>
+                <img src="../../public/img/svg/telegram.svg" alt="Телеграм" class="map-info__button-icon">
+              </a>
+            </div>
+          </div>
+          
+          <!-- Услуга 2 -->
+          <div class="service-item">
+            <div class="service-image">
+              <img src="../../public/img/services/serv.png" alt="Услуга 2">
+            </div>
+            <div class="service-info">
+              <h3 class="service-name">Квесты под ключ</h3>
+              <p class="service-description">
+                Мы создаем уникальные квесты для вашего мероприятия с учетом всех пожеланий. Наша команда разработает
+                сценарий, подготовит реквизит и проведет мероприятие на высшем уровне. Квесты подходят для корпоративов,
+                детских праздников и любых других событий.
+              </p>
+              <a href="#" class="map-info__button service-button">
+                <span>Отправить заявку</span>
+                <img src="../../public/img/svg/telegram.svg" alt="Телеграм" class="map-info__button-icon">
+              </a>
+            </div>
+          </div>
+          
+          <!-- Услуга 3 -->
+          <div class="service-item">
+            <div class="service-image">
+              <img src="../../public/img/services/serv.png" alt="Услуга 3">
+            </div>
+            <div class="service-info">
+              <h3 class="service-name">Аниматоры на праздник</h3>
+              <p class="service-description">
+                Профессиональные актеры и аниматоры создадут незабываемую атмосферу на вашем празднике. 
+                Мы предлагаем широкий выбор персонажей и сценариев для любого возраста и формата мероприятия.
+                Яркие костюмы и захватывающие программы не оставят равнодушным никого.
+              </p>
+              <a href="#" class="map-info__button service-button">
+                <span>Отправить заявку</span>
+                <img src="../../public/img/svg/telegram.svg" alt="Телеграм" class="map-info__button-icon">
+              </a>
+            </div>
           </div>
         </div>
-        <p class="footer__motto">Our vision is to provide convenience<br>and help increase your sales<br>business.</p>
-        <div class="footer__social">
-          <a href="#" class="footer__social-link">
-            <img src="../../public/img/svg/vk-white.svg" alt="ВКонтакте" class="footer__social-icon">
-          </a>
-          <a href="#" class="footer__social-link">
-            <img src="../../public/img/svg/telegram-white.svg" alt="Telegram" class="footer__social-icon">
-          </a>
-          <a href="#" class="footer__social-link">
-            <img src="../../public/img/svg/instagram-white.svg" alt="Instagram" class="footer__social-icon">
-          </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__mobile-row">
+          <div class="footer__left">
+            <div class="footer__logo">
+              <img src="../../public/img/svg/logo.svg" alt="Логотип Карнавал Нечести" class="footer__logo-image">
+              <div class="footer__logo-text">
+                <span class="footer__logo-text-top">Карнавал</span>
+                <span class="footer__logo-text-bottom">Нечести</span>
+              </div>
+            </div>
+            <p class="footer__motto">Our vision is to provide convenience<br>and help increase your sales<br>business.</p>
+            <div class="footer__social">
+              <a href="#" class="footer__social-link">
+                <img src="../../public/img/svg/vk-white.svg" alt="ВКонтакте" class="footer__social-icon">
+              </a>
+              <a href="#" class="footer__social-link">
+                <img src="../../public/img/svg/telegram-white.svg" alt="Telegram" class="footer__social-icon">
+              </a>
+              <a href="#" class="footer__social-link">
+                <img src="../../public/img/svg/instagram-white.svg" alt="Instagram" class="footer__social-icon">
+              </a>
+            </div>
+          </div>
+          <div class="footer__center">
+            <h3 class="footer__title">Адрес</h3>
+            <address class="footer__address">
+              <p>город Оренбург,<br>
+                улица Мусы Джалиля,<br>
+                дом 6</p>
+            </address>
+          </div>
+          <div class="footer__right">
+            <h3 class="footer__title">Контакты</h3>
+            <a href="tel:+79999999999" class="footer__contact">
+              <p>+7 999 999 99 99</p>
+            </a>
+            <a href="mailto:normemailman@mail.ru" class="footer__contact">
+              <p>normemailman@mail.ru</p>
+            </a>
+          </div>
         </div>
       </div>
-      <div class="footer__center">
-        <h3 class="footer__title">Адрес</h3>
-        <address class="footer__address">
-          <p>город Оренбург,<br>
-            улица Мусы Джалиля,<br>
-            дом 6</p>
-        </address>
-      </div>
-      <div class="footer__right">
-        <h3 class="footer__title">Контакты</h3>
-        <a href="tel:+79999999999" class="footer__contact"><p>+7 999 999 99 99</p></a>
-        <a href="mailto:normemailman@mail.ru" class="footer__contact"><p>normemailman@mail.ru</p></a>
+      <div class="footer__bottom">
+        <hr class="footer__divider">
+        <div class="footer__credits">
+          <p class="footer__made-by">Made by:</p>
+          <p class="footer__author">Nikita Gorobets (...)</p>
+          <p class="footer__author">Danila Latyshov (...)</p>
+        </div>
       </div>
     </div>
-    <div class="footer__bottom">
-      <hr class="footer__divider">
-      <div class="footer__credits">
-        <p class="footer__made-by">Made by:</p>
-        <p class="footer__author">Nikita Gorobets (...)</p>
-        <p class="footer__author">Danila Latyshov (...)</p>
-      </div>
-    </div>
-  </div>
-</footer>
+  </footer>
 
-<!-- Подключение скриптов -->
-<script src="../js/main.js" type="module" defer></script>
+  <!-- Подключение скриптов -->
+  <script src="../js/main.js" type="module" defer></script>
 </body>
+
 </html>
