@@ -71,7 +71,7 @@
                     <div class="quest-hero__info">
                         <div class="quest-hero__badge">Премиум-квест</div>
                         <p class="quest-hero__type">Хоррор-квест</p>
-                        <h1 class="quest-hero__title">Название квеста</h1>
+                        <h1 class="quest-hero__title title">Название квеста</h1>
                         <div class="quest-hero__details">
                             <div class="quest-hero__age">18+</div>
                             <div class="quest-hero__price">11000₽</div>
@@ -304,31 +304,22 @@
         </section>
 
         <!-- Секция с картой -->
-        <section class="map-section">
+        <section class="section map-section">
             <div class="container">
-                <div class="map-container">
-                    <div class="yandex-map">
-                        <!-- Вместо iframe с Яндекс Картой используем изображение-заглушку -->
-                        <img src="../../public/img/main_page/map_placeholder.jpg" alt="Карта местоположения" style="width: 100%; height: 100%; object-fit: cover;">
-                        <div class="map-popup">
-                            <h3 class="map-popup__title">Оперный театр</h3>
-                            <p class="map-popup__address">Содружества Великих</p>
-                            <p class="map-popup__floor">Подвал</p>
+                <div class="map-section__inner">
+                    <h2 class="title">Наше местоположение</h2>
+                    <div class="map-container">
+                        <div id="yandex-map" class="yandex-map"></div>
+                        <div class="map-info">
+                            <div class="map-info__address">
+                                <img src="../../public/img/svg/location-icon.svg" alt="Адрес" class="map-info__icon">
+                                <span>город Оренбург, улица Мусы Джалиля, дом 6<br><small>(рядом с губернским центром)</small></span>
+                            </div>
+                            <a href="#" class="map-info__button">
+                                <span>Отправить заявку</span>
+                                <img src="../../public/img/svg/telegram.svg" alt="Телеграм" class="map-info__button-icon">
+                            </a>
                         </div>
-                    </div>
-                    <div class="map-info">
-                        <div class="map-info__address">
-                            <svg class="map-info__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z" fill="currentColor"/>
-                            </svg>
-                            город Оренбург: улица Мира-Дежнёва, дом 6
-                        </div>
-                        <a href="#" class="map-info__button">
-                            <svg class="map-info__button-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V11H13V17ZM13 9H11V7H13V9Z" fill="currentColor"/>
-                            </svg>
-                            Отправить заявку
-                        </a>
                     </div>
                 </div>
             </div>
@@ -339,49 +330,49 @@
         <div class="container">
             <div class="footer__inner">
                 <div class="footer__left">
-                    <a href="index.html" class="footer__logo-link">
-                        <div class="footer__logo">
-                            <img class="footer__logo-image" src="../../public/img/svg/logo.svg" alt="Логотип Карнавал Нечести">
-                            <div class="footer__title">
-                                <span class="footer__title-top">Карнавал</span>
-                                <span class="footer__title-bottom">Нечести</span>
-                            </div>
+                    <div class="footer__logo">
+                        <img src="../../public/img/svg/logo.svg" alt="Логотип Карнавал Нечести" class="footer__logo-image">
+                        <div class="footer__logo-text">
+                            <span class="footer__logo-text-top">Карнавал</span>
+                            <span class="footer__logo-text-bottom">Нечести</span>
                         </div>
-                    </a>
-                    <p class="footer__description">
-                        Our vision is to provide convenience and help increase your sales business.
-                    </p>
+                    </div>
+                    <p class="footer__motto">Our vision is to provide convenience<br>and help increase your sales<br>business.</p>
                     <div class="footer__social">
-                        <a href="#" class="footer__social-link footer__social-link--vk">
-                            <img class="footer__social-icon" src="../../public/img/svg/header_vk.svg" alt="ВКонтакте">
+                        <a href="#" class="footer__social-link">
+                            <img src="../../public/img/svg/vk-white.svg" alt="ВКонтакте" class="footer__social-icon">
                         </a>
-                        <a href="#" class="footer__social-link footer__social-link--telegram">
-                            <img class="footer__social-icon" src="../../public/img/svg/header_telegram.svg" alt="Telegram">
+                        <a href="#" class="footer__social-link">
+                            <img src="../../public/img/svg/telegram-white.svg" alt="Telegram" class="footer__social-icon">
                         </a>
-                        <a href="#" class="footer__social-link footer__social-link--instagram">
-                            <img class="footer__social-icon" src="../../public/img/svg/header_instagram.svg" alt="Instagram">
+                        <a href="#" class="footer__social-link">
+                            <img src="../../public/img/svg/instagram-white.svg" alt="Instagram" class="footer__social-icon">
                         </a>
                     </div>
                 </div>
+                
                 <div class="footer__center">
-                    <h3 class="footer__heading">Адрес</h3>
-                    <p class="footer__address">
-                        город Оренбург:<br>
-                        улица Мира-Дежнёва,<br>
-                        дом 6
-                    </p>
+                    <h3 class="footer__title">Адрес</h3>
+                    <address class="footer__address">
+                        <p>город Оренбург,<br>
+                        улица Мусы Джалиля,<br>
+                        дом 6</p>
+                    </address>
                 </div>
+                
                 <div class="footer__right">
-                    <h3 class="footer__heading">Контакты</h3>
-                    <a href="tel:+79999999999" class="footer__contact">+7 999 999 99 99</a>
-                    <a href="mailto:example@example.ru" class="footer__contact">example@example.ru</a>
+                    <h3 class="footer__title">Контакты</h3>
+                    <a href="tel:+79999999999" class="footer__contact"><p>+7 999 999 99 99</p></a>
+                    <a href="mailto:normemailman@mail.ru" class="footer__contact"><p>normemailman@mail.ru</p></a>
                 </div>
             </div>
+            
             <div class="footer__bottom">
-                <div class="footer__copyright">
-                    <p>Made by</p>
-                    <p>Nikita Gandilov (—)</p>
-                    <p>Daniel Lipatnikov (—)</p>
+                <hr class="footer__divider">
+                <div class="footer__credits">
+                    <p class="footer__made-by">Made by:</p>
+                    <p class="footer__author">Nikita Gorobets (...)</p>
+                    <p class="footer__author">Danila Latyshov (...)</p>
                 </div>
             </div>
         </div>
@@ -440,6 +431,72 @@
                 currentSlide = (currentSlide + 1) % slideCount;
                 updateSlider();
             }, 5000);
+        });
+    </script>
+
+    <!-- Подключение API Яндекс.Карт -->
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    
+    <!-- Инициализация карты -->
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            // Функция загрузки карты
+            function initMap() {
+                // Проверяем, загружен ли API Яндекс.Карт
+                if (typeof ymaps !== 'undefined') {
+                    ymaps.ready(function() {
+                        // Более точные координаты для улицы Мусы Джалиля, дом 6, Оренбург
+                        // Примечание: координаты могут требовать уточнения для точного расположения
+                        const coords = [51.76447698513864, 55.073300575562584];
+                        
+                        // Создаем карту с темной темой
+                        const map = new ymaps.Map('yandex-map', {
+                            center: coords,
+                            zoom: 17, // Увеличиваем зум для лучшей детализации
+                            controls: ['zoomControl', 'geolocationControl']
+                        }, {
+                            searchControlProvider: 'yandex#search'
+                        });
+                        
+                        // Применяем темную тему для карты
+                        map.panes.get('ground').getElement().style.filter = 
+                            'invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%)';
+                        
+                        // Создаем собственную метку с более подробной информацией
+                        const placemark = new ymaps.Placemark(coords, {
+                            balloonContentHeader: 'Карнавал Нечести',
+                            balloonContentBody: 'город Оренбург, улица Мусы Джалиля, дом 6<br><small>(рядом с губернским центром)</small>',
+                            hintContent: 'Карнавал Нечести - рядом с губернским центром'
+                        }, {
+                            preset: 'islands#redDotIconWithCaption',
+                            iconColor: '#C22033'
+                        });
+                        
+                        // Добавляем метку на карту
+                        map.geoObjects.add(placemark);
+                        
+                        // Запрещаем скролл карты при скролле страницы
+                        map.behaviors.disable('scrollZoom');
+                        
+                        // Открываем балун при загрузке
+                        placemark.balloon.open();
+                        
+                        // Добавляем подписи для ближайших достопримечательностей
+                        const gubernskiyCenterCoords = [51.76545, 55.07240]; // Примерные координаты губернского центра
+                        const gubernskiyCenter = new ymaps.Placemark(gubernskiyCenterCoords, {
+                            hintContent: 'Губернский центр'
+                        }, {
+                            preset: 'islands#blueDotIconWithCaption',
+                            iconColor: '#3B5998'
+                        });
+                        
+                        map.geoObjects.add(gubernskiyCenter);
+                    });
+                }
+            }
+            
+            // Вызываем функцию инициализации карты
+            initMap();
         });
     </script>
 </body>

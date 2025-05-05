@@ -1,25 +1,16 @@
 /* Стили для страницы с деталями квеста */
 
-:root {
-    --quest-red: #C22033;
-    --quest-dark: #0D0D0D;
-    --quest-gray: #1E1E1E;
-    --quest-light-gray: #333333;
-    --quest-white: #FFFFFF;
-    --quest-red-hover: #E32740;
-}
-
-/* Общие стили для секций */
+/* === Общие стили для секций === */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
 }
 
-/* Hero секция */
+/* === Hero секция === */
 .quest-hero {
     position: relative;
-    padding: 120px 0;
+    padding: var(--section-padding, 120px) 0;
     background-color: var(--color-bg);
     background-size: cover;
     background-position: center;
@@ -42,13 +33,8 @@
 }
 
 .quest-hero__info {
-    max-width: 600px;
-    background-color: rgba(34, 30, 31, 0.6);
-    backdrop-filter: blur(8px);
     padding: 40px;
     border-radius: 15px;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(238, 226, 227, 0.1);
     animation: fadeIn 1s ease-out;
 }
 
@@ -88,13 +74,11 @@
 }
 
 .quest-hero__title {
-    font-family: var(--font-heading);
     font-size: 48px;
-    font-weight: bold;
-    color: var(--color-text);
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     line-height: 1.2;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    text-align: left;
 }
 
 .quest-hero__details {
@@ -208,7 +192,7 @@
     box-shadow: 0 10px 20px rgba(238, 226, 227, 0.2);
 }
 
-/* Секция с описанием */
+/* === Секция с описанием === */
 .quest-description {
     background-color: var(--color-bg);
     padding: 80px 0;
@@ -318,7 +302,7 @@
     box-shadow: 0 5px 15px rgba(194, 32, 51, 0.3);
 }
 
-/* Секция с галереей */
+/* === Секция с галереей === */
 .quest-gallery {
     background-color: var(--color-bg);
     padding: 80px 0;
@@ -353,7 +337,32 @@
     z-index: 2;
 }
 
-/* Секция с отзывами */
+.quest-gallery__title {
+    font-family: var(--font-heading);
+    font-size: 36px;
+    font-weight: bold;
+    color: var(--color-text);
+    margin-bottom: 40px;
+    text-align: center;
+    position: relative;
+}
+
+.quest-gallery__title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--color-primary);
+}
+
+.quest-gallery__title span {
+    color: var(--color-primary);
+}
+
+/* === Секция с отзывами === */
 .reviews {
     background-color: var(--color-bg);
     padding: 80px 0;
@@ -421,7 +430,6 @@
 }
 
 .reviews__video {
-    max-width: 800px;
     margin: 0 auto 60px;
 }
 
@@ -553,7 +561,7 @@
     opacity: 0.9;
 }
 
-/* Секция с другими квестами */
+/* === Секция с другими квестами === */
 .other-quests {
     background-color: var(--color-bg);
     padding: 80px 0 100px;
@@ -752,16 +760,38 @@
     .quest-hero__info {
         max-width: 700px;
     }
+    
+    .quest-description__content {
+        max-width: 900px;
+        padding: 50px;
+    }
+    
+    .quest-description__title,
+    .reviews__title,
+    .quest-gallery__title,
+    .other-quests__title {
+        font-size: 42px;
+    }
+    
+    .quest-description__text {
+        font-size: 18px;
+    }
+    
+    .other-quests__grid {
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 1600px;
+        margin: 0 auto;
+    }
 }
 
 /* Ноутбуки (≥1440px и <1920px) */
 @media screen and (min-width: 1440px) and (max-width: 1919px) {
     .quest-description__content {
-        max-width: 80%;
+        max-width: 100%;
     }
 }
 
-/* Планшеты (≥1024px и <1440px) */
+/* Планшеты в альбомном режиме (≥1024px и <1440px) */
 @media screen and (min-width: 1024px) and (max-width: 1439px) {
     .quest-hero {
         padding: 80px 0;
@@ -778,41 +808,54 @@
     
     .quest-description__content {
         max-width: 100%;
+        padding: 30px;
+    }
+    
+    .quest-description__title,
+    .reviews__title,
+    .quest-gallery__title,
+    .other-quests__title {
+        font-size: 32px;
     }
     
     .reviews__testimonials {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
     
     .other-quests__grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
     }
 }
 
-/* Телефоны (<1024px) */
-@media screen and (max-width: 1023px) {
+/* Планшеты в портретном режиме (≥768px и <1024px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
     .quest-hero {
         padding: 60px 0;
     }
     
     .quest-hero__title {
-        font-size: 32px;
+        font-size: 36px;
     }
     
     .quest-hero__info {
+        max-width: 90%;
         padding: 25px;
     }
     
     .quest-hero__details {
-        flex-wrap: wrap;
+        gap: 15px;
     }
     
     .quest-hero__buttons {
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
     
-    .button {
-        width: 100%;
+    .quest-hero .button {
+        padding: 14px 25px;
+        font-size: 15px;
     }
     
     .quest-description,
@@ -823,13 +866,110 @@
     }
     
     .quest-description__content {
+        max-width: 100%;
         padding: 25px;
     }
     
     .quest-description__title,
     .reviews__title,
+    .quest-gallery__title,
     .other-quests__title {
         font-size: 28px;
+    }
+    
+    .reviews__testimonials {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .other-quests__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .other-quests__image-container {
+        height: 180px;
+    }
+}
+
+/* Мобильные устройства (≥576px и <768px) */
+@media screen and (min-width: 576px) and (max-width: 767px) {
+    .quest-hero {
+        padding: 50px 0;
+    }
+    
+    .quest-hero__title {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .quest-hero__type {
+        text-align: center;
+    }
+
+    .quest-hero__badge {
+        display: block;
+        width: 150px;
+        margin: 0 auto 20px;
+
+    }
+    
+    .quest-hero__info {
+        max-width: 100%;
+        padding: 20px;
+    }
+    
+    .quest-hero__details {
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: space-around;
+    }
+    
+    .quest-hero__buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .quest-hero .button {
+        width: 100%;
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+    
+    .quest-description,
+    .quest-gallery,
+    .reviews,
+    .other-quests {
+        padding: 50px 0;
+    }
+    
+    .quest-description__content {
+        max-width: 100%;
+        padding: 20px;
+    }
+    
+    .quest-description__title,
+    .reviews__title,
+    .quest-gallery__title,
+    .other-quests__title {
+        font-size: 26px;
+    }
+    
+    .quest-description__text {
+        font-size: 15px;
+    }
+    
+    .reviews__video-play {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .reviews__testimonials {
+        grid-template-columns: 1fr;
+    }
+    
+    .reviews__testimonial {
+        padding: 20px;
     }
     
     .other-quests__grid {
@@ -838,7 +978,7 @@
     }
 }
 
-/* Малые телефоны (<576px) */
+/* Малые мобильные устройства (<576px) */
 @media screen and (max-width: 575px) {
     .quest-hero {
         padding: 40px 0;
@@ -846,6 +986,70 @@
     
     .quest-hero__title {
         font-size: 28px;
+        margin-bottom: 20px;
+    }
+    
+    .quest-hero__info {
+        max-width: 100%;
+        padding: 20px;
+    }
+    
+    .quest-hero__details {
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+    
+    .quest-hero__price,
+    .quest-hero__duration,
+    .quest-hero__difficulty {
+        font-size: 16px;
+    }
+    
+    .quest-hero__buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .quest-hero .button {
+        width: 100%;
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+    
+    .quest-description,
+    .quest-gallery,
+    .reviews,
+    .other-quests {
+        padding: 40px 0;
+    }
+    
+    .quest-description__content {
+        max-width: 100%;
+        padding: 20px;
+    }
+    
+    .quest-description__title,
+    .reviews__title,
+    .quest-gallery__title,
+    .other-quests__title {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+    
+    .quest-description__text {
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 25px;
+    }
+    
+    .quest-description__features {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .quest-description__feature {
+        width: 100%;
     }
     
     .reviews__video-play {
@@ -858,5 +1062,19 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
+    }
+    
+    .reviews__testimonial-avatar {
+        margin-bottom: 15px;
+    }
+    
+    .other-quests__grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .other-quests__subtitle {
+        font-size: 14px;
+        margin-bottom: 30px;
     }
 } 
