@@ -799,6 +799,7 @@
     
     .quest-hero__title {
         font-size: 40px;
+        width: 600px;
     }
     
     .quest-hero__info {
