@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ControlWeb</title>
+    <!-- Подключение шрифтов -->
+    <link rel="stylesheet" href="../../public/fonts/Lato/stylesheet.css">
+    <link rel="stylesheet" href="../../public/fonts/Unbounded/stylesheet.css">
+    <!-- Подключение стилей -->
+    <link rel="stylesheet" href="../styles/base/reset.css">
+    <link rel="stylesheet" href="../styles/utils/utils.css">
+    <link rel="stylesheet" href="../styles/layouts/header.css">
+    <link rel="stylesheet" href="../styles/layouts/footer.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/components/employees.css">
+    <!-- Предзагрузка шрифтов -->
+    <link rel="preload" href="../../public/fonts/Unbounded/Unbounded-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../public/fonts/Unbounded/Unbounded-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../public/fonts/Lato/Lato-Regular.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="../../public/fonts/Lato/Lato-Bold.woff" as="font" type="font/woff" crossorigin>
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <a href="index.html" class="header__logo-link">
+                <div class="header__logo">
+                    <img class="header__logo-image" src="../../public/img/svg/logo.svg" alt="Логотип Карнавал Нечести">
+                    <div class="header__title">
+                        <span class="header__title-top">Карнавал</span>
+                        <span class="header__title-bottom">Нечести</span>
+                    </div>
+                </div>
+            </a>
+            <button class="header__burger-button">
+                <span class="header__burger-line"></span>
+                <span class="header__burger-line"></span>
+                <span class="header__burger-line"></span>
+            </button>
+            <nav class="header__nav">
+                <ul class="header__menu">
+                    <li class="header__menu-item"><a href="index.html" class="header__menu-link">Главная</a></li>
+                    <li class="header__menu-item"><a href="employees.html" class="header__menu-link">Сотрудники</a></li>
+                    <li class="header__menu-item"><a href="#" class="header__menu-link">Квесты</a></li>
+                    <li class="header__menu-item"><a href="services.html" class="header__menu-link">Услуги</a></li>
+                </ul>
+            </nav>
+            <div class="header__social">
+                <a href="#" class="header__social-link header__social-link--vk">
+                    <img class="header__social-icon" src="../../public/img/svg/header_vk.svg" alt="ВКонтакте">
+                </a>
+                <a href="#" class="header__social-link header__social-link--telegram">
+                    <img class="header__social-icon" src="../../public/img/svg/header_telegram.svg" alt="Telegram">
+                </a>
+                <a href="#" class="header__social-link header__social-link--instagram">
+                    <img class="header__social-icon" src="../../public/img/svg/header_instagram.svg" alt="Instagram">
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Main Content -->
+<main>
+    <section class="employees">
+        <div class="container">
+            <div class="employees__header">
+                <h2 class="employees__title">
+                    <span class="employees__title-white">Наши</span>
+                    <span class="employees__title-red">сотрудники</span>
+                </h2>
+                <div class="employees__controls">
+                    <button class="employees__arrow employees__arrow--prev" aria-label="Предыдущий сотрудник">
+                        <img src="../../public/img/svg/arrow__left.svg" alt="←" class="employees__arrow-icon">
+                    </button>
+                    <button class="employees__arrow employees__arrow--next" aria-label="Следующий сотрудник">
+                        <img src="../../public/img/svg/arrow__right.svg" alt="→" class="employees__arrow-icon">
+                    </button>
+                </div>
+            </div>
+            <div class="employees__grid">
+                <!-- Каждый сотрудник -->
+                <div class="employees__item">
+                    <img src="../../public/img/our_employee/person.png" alt="Сотрудник 1" class="employees__image">
+                </div>
+                <div class="employees__item">
+                    <img src="../../public/img/our_employee/person.png" alt="Сотрудник 2" class="employees__image">
+                </div>
+                <div class="employees__item">
+                    <img src="../../public/img/our_employee/person.png" alt="Сотрудник 3" class="employees__image">
+                </div>
+                <div class="employees__item">
+                    <img src="../../public/img/our_employee/person.png" alt="Сотрудник 4" class="employees__image">
+                </div>
+                <div class="employees__item">
+                    <img src="../../public/img/our_employee/person.png" alt="Сотрудник 5" class="employees__image">
+                </div>
+                <div class="employees__item">
+                    <img src="../../public/img/our_employee/person.png" alt="Сотрудник 6" class="employees__image">
+                </div>
+                <div class="employees__item">
+                    <img src="../../public/img/our_employee/person.png" alt="Сотрудник 7" class="employees__image">
+                </div>
+                <div class="employees__item">
+                    <img src="../../public/img/our_employee/person.png" alt="Сотрудник 8" class="employees__image">
+                </div>
+                <div class="employees__item">
+                    <img src="../../public/img/our_employee/person.png" alt="Сотрудник 9" class="employees__image">
+                </div>
+                <div class="employees__item">
+                    <img src="../../public/img/our_employee/person.png" alt="Сотрудник 10" class="employees__image">
+                </div>
+                <div class="employees__item">
+                    <img src="../../public/img/our_employee/person.png" alt="Сотрудник 11" class="employees__image">
+                </div>
+                <div class="employees__item">
+                    <img src="../../public/img/our_employee/person.png" alt="Сотрудник 12" class="employees__image">
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer__inner">
+            <div class="footer__left">
+                <div class="footer__logo">
+                    <img src="../../public/img/svg/logo.svg" alt="Логотип Карнавал Нечести" class="footer__logo-image">
+                    <div class="footer__logo-text">
+                        <span class="footer__logo-text-top">Карнавал</span>
+                        <span class="footer__logo-text-bottom">Нечести</span>
+                    </div>
+                </div>
+                <p class="footer__motto">Our vision is to provide convenience<br>and help increase your sales<br>business.</p>
+                <div class="footer__social">
+                    <a href="#" class="footer__social-link">
+                        <img src="../../public/img/svg/vk-white.svg" alt="ВКонтакте" class="footer__social-icon">
+                    </a>
+                    <a href="#" class="footer__social-link">
+                        <img src="../../public/img/svg/telegram-white.svg" alt="Telegram" class="footer__social-icon">
+                    </a>
+                    <a href="#" class="footer__social-link">
+                        <img src="../../public/img/svg/instagram-white.svg" alt="Instagram" class="footer__social-icon">
+                    </a>
+                </div>
+            </div>
+            <div class="footer__center">
+                <h3 class="footer__title">Адрес</h3>
+                <address class="footer__address">
+                    <p>город Оренбург,<br>
+                        улица Мусы Джалиля,<br>
+                        дом 6</p>
+                </address>
+            </div>
+            <div class="footer__right">
+                <h3 class="footer__title">Контакты</h3>
+                <a href="tel:+79999999999" class="footer__contact"><p>+7 999 999 99 99</p></a>
+                <a href="mailto:normemailman@mail.ru" class="footer__contact"><p>normemailman@mail.ru</p></a>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <hr class="footer__divider">
+            <div class="footer__credits">
+                <p class="footer__made-by">Made by:</p>
+                <p class="footer__author">Nikita Gorobets (...)</p>
+                <p class="footer__author">Danila Latyshov (...)</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Подключение скриптов -->
+<script src="../js/main.js" type="module" defer></script>
+
+</body>
+</html>

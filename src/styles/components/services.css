@@ -1,0 +1,100 @@
+/* === Секция "Наши услуги" === */
+.services {
+    margin: 100px 0;
+}
+
+/* === Заголовок секции === */
+.services__title {
+    display: inline-block;
+    margin: 0;
+    font-family: 'Unbounded', sans-serif;
+    width: 592px;
+    font-size: 68px;
+}
+
+.services__title-white {
+    color: #EEE2E3;
+}
+
+.services__title-red {
+    color: #C22033;
+}
+
+/* === Контейнер заголовка и стрелок === */
+.services__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+/* === Стрелки управления === */
+.services__controls {
+    display: flex;
+    gap: 44px;
+}
+
+.services__arrow {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s;
+}
+
+.services__arrow:hover {
+    opacity: 0.7;
+}
+
+/* === Блок услуг === */
+.services__content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.service-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.service-name {
+    font-family: 'Unbounded', sans-serif;
+    width: 408px;
+    font-size: 36px;
+    color: #C22033;
+    margin-bottom: 25px;
+}
+
+.service-description {
+    font-family: 'Lato', sans-serif;
+    font-size: 28px;
+    color: white;
+    margin-bottom: 55px;
+    width: 577px;
+    max-height: 336px;
+}
+
+.service-image {
+    width: 323px;
+    height: 323px;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.service-button {
+    width: 271px;
+}

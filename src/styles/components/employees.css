@@ -1,0 +1,102 @@
+/* === Секция "Наши сотрудники" === */
+.employees {
+    margin: 99px 0;
+}
+
+/* === Заголовок секции === */
+.employees__title {
+    display: inline-block;
+    font-family: 'Unbounded', sans-serif;
+    width: 822px;
+    font-size: 68px;
+}
+
+.employees__title-white {
+    color: #fff;
+}
+
+.employees__title-red {
+    color: #e74c3c;
+}
+
+/* === Контейнер заголовка и стрелок === */
+.employees__header {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+    margin-bottom: 60px;
+}
+
+/* === Стрелки управления === */
+.employees__controls {
+    display: flex;
+    gap: 20px;
+}
+
+.employees__arrow {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.employees__arrow-icon {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
+/* === Сетка сотрудников === */
+.employees__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* === Один сотрудник === */
+.employees__item {
+    position: relative;
+    overflow: hidden;
+    width: 323px;
+    height: 323px;
+    border-radius: 50%;
+}
+
+.employees__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.employees__item:hover .employees__image {
+    transform: scale(1.1);
+}
+
+@media (min-width: 1920px) {
+    .employees__header {
+    gap: 546px;
+    }
+    .employees__grid {
+    gap: 20px;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .employees__item {
+        width: 390px;
+        height: 390px;
+    }
+    .employees__controls {
+    gap: 81px;
+    }
+}
+
+

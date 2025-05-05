@@ -44,6 +44,10 @@
     line-height: 1.2;
 }
 
+.footer__logo-text-bottom {
+    color: #000; /* Чёрный цвет */
+}
+
 .footer__motto {
     line-height: 1.6;
     margin-bottom: 30px;
