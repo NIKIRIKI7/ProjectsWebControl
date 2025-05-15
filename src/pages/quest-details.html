@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="../styles/components/quest-details.css">
     <link rel="stylesheet" href="../styles/components/quest-slider.css">
+    <link rel="stylesheet" href="../styles/components/quest-modal.css">
 
     <script defer src="../js/main.js" type="module"></script>
 </head>
@@ -499,5 +500,65 @@
             initMap();
         });
     </script>
+
+    <!-- Модальное окно для записи на квест -->
+    <div class="quest-modal" id="quest-modal">
+        <div class="quest-modal__content">
+            <button class="quest-modal__close" aria-label="Закрыть">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <h2 class="quest-modal__title">Записаться на квест</h2>
+            <form class="quest-modal__form" id="quest-form">
+                <div class="quest-modal__form-group">
+                    <label for="fullName" class="quest-modal__label">Ваше имя</label>
+                    <input type="text" id="fullName" name="fullName" class="quest-modal__input" required>
+                </div>
+                <div class="quest-modal__form-group">
+                    <label for="phone" class="quest-modal__label">Телефон</label>
+                    <input type="tel" id="phone" name="phone" class="quest-modal__input" required>
+                </div>
+                <div class="quest-modal__form-group">
+                    <label for="email" class="quest-modal__label">Email</label>
+                    <input type="email" id="email" name="email" class="quest-modal__input" required>
+                </div>
+                <div class="quest-modal__form-group">
+                    <label for="participants" class="quest-modal__label">Количество участников</label>
+                    <select id="participants" name="participants" class="quest-modal__select" required>
+                        <option value="2">2 человека</option>
+                        <option value="3">3 человека</option>
+                        <option value="4">4 человека</option>
+                        <option value="5">5 человек</option>
+                        <option value="6">6 человек</option>
+                    </select>
+                </div>
+                <div class="quest-modal__form-group">
+                    <label for="date" class="quest-modal__label">Дата посещения</label>
+                    <input type="date" id="date" name="date" class="quest-modal__input" required>
+                </div>
+                <div class="quest-modal__form-group">
+                    <label for="time" class="quest-modal__label">Время</label>
+                    <select id="time" name="time" class="quest-modal__select" required>
+                        <option value="10:00">10:00</option>
+                        <option value="12:00">12:00</option>
+                        <option value="14:00">14:00</option>
+                        <option value="16:00">16:00</option>
+                        <option value="18:00">18:00</option>
+                        <option value="20:00">20:00</option>
+                    </select>
+                </div>
+                <div class="quest-modal__form-group">
+                    <label for="comment" class="quest-modal__label">Комментарий</label>
+                    <textarea id="comment" name="comment" class="quest-modal__textarea"></textarea>
+                </div>
+                <button type="submit" class="quest-modal__submit">Отправить заявку</button>
+            </form>
+        </div>
+    </div>
+    
+    <!-- JavaScript-модуль для сохранения данных -->
+    <script src="../../public/data/bookings-storage.js"></script>
 </body>
 </html> 

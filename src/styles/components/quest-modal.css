@@ -1,0 +1,153 @@
+/* Стили для модального окна записи на квест */
+.quest-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.quest-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.quest-modal__content {
+    background-color: #221E1F;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 8px;
+    padding: 40px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.quest-modal.active .quest-modal__content {
+    transform: translateY(0);
+}
+
+.quest-modal__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: #E0E0E0;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.quest-modal__close:hover {
+    color: #C22033;
+}
+
+.quest-modal__title {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.quest-modal__form-group {
+    margin-bottom: 20px;
+}
+
+.quest-modal__label {
+    display: block;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    color: #E0E0E0;
+    margin-bottom: 8px;
+}
+
+.quest-modal__input,
+.quest-modal__select,
+.quest-modal__textarea {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.quest-modal__input:focus,
+.quest-modal__select:focus,
+.quest-modal__textarea:focus {
+    border-color: rgba(194, 32, 51, 0.6);
+    background-color: rgba(255, 255, 255, 0.08);
+    outline: none;
+}
+
+.quest-modal__textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.quest-modal__submit {
+    display: block;
+    width: 100%;
+    background-color: #C22033;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 20px;
+    color: #fff;
+    font-family: 'Unbounded', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(194, 32, 51, 0.3);
+    margin-top: 30px;
+}
+
+.quest-modal__submit:hover {
+    background-color: #e42c3f;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(194, 32, 51, 0.4);
+}
+
+.quest-modal__submit:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(194, 32, 51, 0.3);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .quest-modal__content {
+        padding: 25px;
+    }
+    
+    .quest-modal__title {
+        font-size: 20px;
+    }
+    
+    .quest-modal__label {
+        font-size: 14px;
+    }
+    
+    .quest-modal__input,
+    .quest-modal__select,
+    .quest-modal__textarea,
+    .quest-modal__submit {
+        font-size: 14px;
+        padding: 10px 12px;
+    }
+} 
